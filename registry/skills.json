@@ -27,7 +27,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "artokun--director",
@@ -59,7 +63,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--ltx-director",
@@ -91,7 +99,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--ltxv2-video",
@@ -123,7 +135,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--minimax-h3-video",
@@ -155,7 +171,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--video-extend",
@@ -187,7 +207,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--video-upscale",
@@ -217,7 +241,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "artokun--wan-flf-video",
@@ -249,7 +277,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--wan-multitalk",
@@ -281,7 +313,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--wan-scail-replacement",
@@ -313,7 +349,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "artokun--wan-t2v-video",
@@ -345,7 +385,11 @@
     "warnings": [
       "Do not infer support for new checkpoints from a model-family name.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "comfyui"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "barty-bart--motion-broll",
@@ -371,7 +415,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "benjiyaya--ltx-2-5-prompter",
@@ -400,6 +448,15 @@
       "Prompt examples are not proof of API support; hardware and runtime claims are not independently validated.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required",
+    "model_ids": [
+      "ltx-2-5-fast-api",
+      "ltx-2-5-pro-api",
+      "ltx-2-5-local"
     ]
   },
   {
@@ -432,7 +489,11 @@
     "warnings": [
       "Sampled frames cannot prove smooth motion or reliable audiovisual synchronization.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "calesthio--ai-video-gen",
@@ -459,7 +520,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "calesthio--bfl-api",
@@ -488,7 +553,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "calesthio--character-animation-qa",
@@ -515,7 +584,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "calesthio--ffmpeg",
@@ -542,7 +615,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "calesthio--gemini-omni",
@@ -571,7 +648,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "calesthio--kling-official",
@@ -600,7 +681,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "calesthio--ltx2",
@@ -629,7 +714,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "calesthio--minimax-h3",
@@ -658,7 +747,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "calesthio--seedance-2-5",
@@ -687,7 +780,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "openmontage"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "chatcut-inc--create-motion-graphics",
@@ -717,7 +814,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "chatcut-inc--digital-human",
@@ -747,7 +848,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "chatcut-inc--export",
@@ -779,7 +884,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "chatcut-inc--multicam-sync",
@@ -809,7 +918,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "chatcut-inc--shader-gen",
@@ -839,7 +952,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "chatcut-inc--verification",
@@ -869,7 +986,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "chatcut-inc--video-gen",
@@ -904,6 +1025,14 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "family-only; exact-version preflight required",
+    "model_ids": [
+      "seedance-2-5-chatcut",
+      "h3-max-chatcut"
     ]
   },
   {
@@ -936,7 +1065,11 @@
       "ChatCut's model aliases and capabilities differ from direct provider endpoints.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "chatcut"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "cognyai--linkedin-launch-video",
@@ -964,7 +1097,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "cognyai--reddit-launch-video",
@@ -990,7 +1127,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "cognyai--tiktok-launch-video",
@@ -1018,7 +1159,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "cognyai--video-to-gif",
@@ -1044,7 +1189,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--cinematography",
@@ -1074,7 +1223,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--fal-models-catalog",
@@ -1104,7 +1257,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--fal-prompting",
@@ -1134,7 +1291,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--fal-workflow",
@@ -1164,7 +1325,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--genmedia",
@@ -1194,7 +1359,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--model-routing",
@@ -1224,7 +1393,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "fal-ai-community--storytelling",
@@ -1254,7 +1427,11 @@
       "Community repository; not a blanket official endorsement by fal.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "fal"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--embedded-captions",
@@ -1286,7 +1463,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--faceless-explainer",
@@ -1317,7 +1498,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--figma",
@@ -1348,7 +1533,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--general-video",
@@ -1379,7 +1568,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-animation",
@@ -1410,7 +1603,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-audio",
@@ -1441,7 +1638,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-cli",
@@ -1472,7 +1673,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-core",
@@ -1503,7 +1708,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-creative",
@@ -1534,7 +1743,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-keyframes",
@@ -1565,7 +1778,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-registry",
@@ -1596,7 +1813,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes-studio",
@@ -1627,7 +1848,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--hyperframes",
@@ -1658,7 +1883,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--media-use",
@@ -1690,7 +1919,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--motion-graphics",
@@ -1721,7 +1954,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--music-to-video",
@@ -1752,7 +1989,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--pr-to-video",
@@ -1783,7 +2024,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--product-launch-video",
@@ -1814,7 +2059,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--remotion-to-hyperframes",
@@ -1845,7 +2094,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--slideshow",
@@ -1876,7 +2129,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "heygen-com--talking-head-recut",
@@ -1908,7 +2165,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--ad-creative-video",
@@ -1938,7 +2199,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--launch-video",
@@ -1968,7 +2233,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--testimonial-video",
@@ -1998,7 +2267,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--animated-infographic",
@@ -2028,7 +2301,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--chart-animation",
@@ -2058,7 +2335,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--presentation-video",
@@ -2088,7 +2369,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--photo-slideshow",
@@ -2119,7 +2404,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--product-demo-video",
@@ -2150,7 +2439,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--promo-video",
@@ -2180,7 +2473,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--diagram-animation",
@@ -2210,7 +2507,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--explainer-video",
@@ -2241,7 +2542,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--isometric-animation",
@@ -2271,7 +2576,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--whiteboard-animation",
@@ -2301,7 +2610,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--wrapped-video",
@@ -2331,7 +2644,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--brand-motion-guidelines",
@@ -2361,7 +2678,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--client-revisions",
@@ -2391,7 +2712,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--creative-brief",
@@ -2421,7 +2746,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--video-delivery-specs",
@@ -2452,7 +2781,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--generative-illustration",
@@ -2483,7 +2816,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--javascript-animation",
@@ -2513,7 +2850,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--soundtrack",
@@ -2543,7 +2884,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--kinetic-typography",
@@ -2574,7 +2919,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--lower-thirds",
@@ -2604,7 +2953,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--manim",
@@ -2635,7 +2988,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--map-animation",
@@ -2665,7 +3022,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--after-effects",
@@ -2695,7 +3056,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--animation-principles",
@@ -2725,7 +3090,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--beat-sync-editing",
@@ -2755,7 +3124,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--color-motion",
@@ -2785,7 +3158,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--logo-animation",
@@ -2815,7 +3192,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--motion-art-direction",
@@ -2845,7 +3226,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--motion-background",
@@ -2875,7 +3260,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--remotion-video",
@@ -2905,7 +3294,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--shot-composition",
@@ -2935,7 +3328,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--text-message-animation",
@@ -2965,7 +3362,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--caption-animation",
@@ -2996,7 +3397,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--countdown-video",
@@ -3026,7 +3431,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--lower-thirds--tiktok-video-skills",
@@ -3057,7 +3466,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--short-form-video",
@@ -3087,7 +3500,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--accessible-animation",
@@ -3117,7 +3534,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--ascii-animation",
@@ -3147,7 +3568,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--gsap-web",
@@ -3177,7 +3602,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--lottie-animation",
@@ -3207,7 +3636,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--svg-animation",
@@ -3237,7 +3670,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--particle-system",
@@ -3267,7 +3704,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--shader-glsl",
@@ -3297,7 +3738,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--threejs-animation",
@@ -3327,7 +3772,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--audiogram",
@@ -3358,7 +3807,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "iart-ai--youtube-intro-outro",
@@ -3388,7 +3841,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "inference-sh--video-prompting-guide",
@@ -3424,7 +3881,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inference-sh--ai-avatar-video",
@@ -3454,7 +3915,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "inference-sh--ai-video-generation",
@@ -3492,7 +3957,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inference-sh--google-veo",
@@ -3524,7 +3993,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inference-sh--happyhorse",
@@ -3556,7 +4029,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inference-sh--image-to-video",
@@ -3590,7 +4067,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inference-sh--p-video-avatar",
@@ -3620,7 +4101,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "inference-sh--p-video",
@@ -3652,7 +4137,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inference-sh--remotion-render",
@@ -3682,7 +4171,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "inference-sh--seedance",
@@ -3714,7 +4207,11 @@
       "Verify the wrapper's model version; a family name does not establish 2.5 or 3.0 support.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "inference-sh"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "inovue--fal-skill-creator",
@@ -3744,7 +4241,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "jellypod-inc--website-to-hyperframes",
@@ -3769,7 +4270,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "joevenner--minimax-music",
@@ -3799,7 +4304,11 @@
     "warnings": [
       "The H3 guide's endpoint and reference-limit assumptions differ from verified provider/model-card surfaces.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "joevenner--minimax-speech",
@@ -3831,7 +4340,11 @@
     "warnings": [
       "The H3 guide's endpoint and reference-limit assumptions differ from verified provider/model-card surfaces.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "joevenner--minimax-video",
@@ -3861,7 +4374,11 @@
     "warnings": [
       "The H3 guide's endpoint and reference-limit assumptions differ from verified provider/model-card surfaces.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "latent-spaces--brag-slim",
@@ -3892,7 +4409,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "latent-spaces--brag",
@@ -3924,7 +4445,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "minimax-ai--3d-animation-short-generator",
@@ -3955,7 +4480,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--brand-promo-video-generator",
@@ -3986,7 +4515,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--co-op-game-intro-generator",
@@ -4017,7 +4550,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--h3-prompt-writing",
@@ -4050,6 +4587,15 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required",
+    "model_ids": [
+      "minimax-h3-fal",
+      "minimax-h3-local-fl",
+      "minimax-h3-local-ref"
     ]
   },
   {
@@ -4081,7 +4627,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--minimalist-product-ad-generator",
@@ -4112,7 +4662,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--music-video-subtitle-generator",
@@ -4145,7 +4699,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--paper-collage-explainer-generator",
@@ -4176,7 +4734,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--papercraft-stop-motion-explainer",
@@ -4207,7 +4769,11 @@
       "Requires MiniMax Hub tools; not a drop-in Claude Code or Codex renderer.",
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "minimax-hub"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--gif-sticker-maker",
@@ -4232,7 +4798,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "minimax-ai--mmx-cli",
@@ -4259,7 +4829,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--minimax-music-gen",
@@ -4286,7 +4860,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "minimax-ai--shader-dev",
@@ -4311,7 +4889,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "minimax-ai--vision-analysis",
@@ -4336,7 +4918,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-best-practices",
@@ -4368,7 +4954,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-captions",
@@ -4401,7 +4991,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-create",
@@ -4433,7 +5027,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-docs",
@@ -4465,7 +5063,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-interactivity",
@@ -4497,7 +5099,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-maps",
@@ -4529,7 +5135,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-markup",
@@ -4561,7 +5171,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-multimedia",
@@ -4593,7 +5207,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-render",
@@ -4625,7 +5243,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-saas",
@@ -4657,7 +5279,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-studio",
@@ -4689,7 +5315,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "remotion-dev--remotion-upgrade",
@@ -4721,7 +5351,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "replicate--compare-models",
@@ -4749,7 +5383,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "replicate"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "replicate--find-models",
@@ -4777,7 +5415,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "replicate"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "replicate--prompt-videos",
@@ -4805,7 +5447,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "replicate"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "replicate--run-models",
@@ -4833,7 +5479,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "replicate"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "scenario-labs--scenario-grok-imagine-video",
@@ -4863,7 +5513,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-kling",
@@ -4893,7 +5547,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-luma-video",
@@ -4923,7 +5581,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-minimax-video",
@@ -4953,7 +5615,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-runway",
@@ -4983,7 +5649,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-seedance-music-video",
@@ -5013,7 +5683,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-seedance-storyboard",
@@ -5043,7 +5717,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-seedance",
@@ -5073,6 +5751,13 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required",
+    "model_ids": [
+      "seedance-2-5-scenario"
     ]
   },
   {
@@ -5103,7 +5788,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "scenario-labs--scenario-video-ads",
@@ -5133,7 +5822,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "scenario-labs--scenario-video-assembly",
@@ -5163,7 +5856,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "scenario-labs--scenario-video-editing",
@@ -5191,7 +5888,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "scenario-labs--scenario-video",
@@ -5219,7 +5920,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "scenario"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "siegerts--creating-canvas-video-animations",
@@ -5244,7 +5949,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "sogni-ai--sogni-creative-agent-skill",
@@ -5275,7 +5984,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "sogni-ai--loop-maker",
@@ -5302,7 +6015,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "family-only; exact-version preflight required"
   },
   {
     "id": "tuzhechen2005--kinetic-reel",
@@ -5328,7 +6045,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "tuzhechen2005--painted-animation",
@@ -5354,7 +6075,11 @@
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed.",
       "No machine-readable repository license resolved; linked only, not vendored."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "varnan-tech--vid-motion-graphics",
@@ -5379,7 +6104,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "varnan-tech--vid-product-launch",
@@ -5404,7 +6133,11 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   },
   {
     "id": "varnan-tech--vid-sizzle-reel",
@@ -5429,6 +6162,465 @@
     "runtime_tested": false,
     "warnings": [
       "Static inspection only; no dependency installation, generation or paid endpoint execution performed."
-    ]
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--animated-chart",
+    "name": "animated-chart",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for animated chart, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/animated-chart/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "dd6c9817f7e5844664666f87161b06894ae0cbae",
+    "sha256": "032b99ae8de1651ca6437d9fdb89ee20c696e328f23d16870749144989db0460",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/animated-chart/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--apple-launch-film",
+    "name": "apple-launch-film",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for apple launch film, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/apple-launch-film/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "826accbaac008d5ed6fff8be756204b6616f8158",
+    "sha256": "3923ff37bc6f830d85d882de81c029f4d1be1435bcbd292c58bd3ad5f1d83295",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/apple-launch-film/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--brand-intake",
+    "name": "brand-intake",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for brand intake, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/brand-intake/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "b0f7dc1b26c072c735ca4fa2be3b59e518153da1",
+    "sha256": "76d2d615e147150946375cf978286b1ca1fea560bf276d7df5943587bc0963e3",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/brand-intake/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--launch-video",
+    "name": "launch-video",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for launch video, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/launch-video/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "652833413928f8d407a7f7f17fdfe13f6d40cacd",
+    "sha256": "88e1c4648bd4e20509c33ca7ac1fd220efa3d2281debd0d10126b4cdd2abc4c8",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/launch-video/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--loop-cover",
+    "name": "loop-cover",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for loop cover, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/loop-cover/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "6e7366b5c90312934ca07288a152c310bc1231ef",
+    "sha256": "a14fc83df6f23abc17ed2a1715d1288d14da956892087dd92cb2b646c5f1a00f",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/loop-cover/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--milestone-reveal",
+    "name": "milestone-reveal",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for milestone reveal, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/milestone-reveal/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "a0a682f83ca3dfa4a4fe5c7f25720d99a431fdd4",
+    "sha256": "5b56d927559f98f810c3c8c7cb8f712fd997ee29c76191472cea8eec66b24d14",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/milestone-reveal/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--model-showdown",
+    "name": "model-showdown",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for model showdown, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/model-showdown/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "32ed4df63065062e101f6ca0cfceaeb1d93c3309",
+    "sha256": "76c3cffbea8a261b6f4604f1be50ea449ee438f049adf4a94fe0f0f273b62119",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/model-showdown/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--motion-brief-writer",
+    "name": "motion-brief-writer",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for motion brief writer, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/motion-brief-writer/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "937256f9c97520cb7bb40d1e7fdb76272679ea9c",
+    "sha256": "2e0c0035bf1b5a5031d29dd9ad593bd53d60b14917d77d4834cb0a1811efafcb",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/motion-brief-writer/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--motion-effects",
+    "name": "motion-effects",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for motion effects, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/motion-effects/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "d6ba3d23f2dca4bab5e37bd8784fb9b14dbd334f",
+    "sha256": "576540bd2e6a4b7e134ec621eaf4d74e6edaaa02b9a4f04daef364bea20566d9",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/motion-effects/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--newsletter-promo",
+    "name": "newsletter-promo",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for newsletter promo, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/newsletter-promo/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "02fc3aba562abd17cabb9a1da4996970817691b4",
+    "sha256": "57ebc05185a1354b128309f54ea06eb4c57e30311ccf08b3071b4fcfe79fc16a",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/newsletter-promo/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--reel-export",
+    "name": "reel-export",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for reel export, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/reel-export/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "f4d43fd58ef32fb8ef8039b6cb83b9cdca9b9010",
+    "sha256": "aed76fe0e6641bddedd9fd97ebc979e59c98488de11cdac2887f5196e3f5b9ca",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/reel-export/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--title-sequence-3d",
+    "name": "title-sequence-3d",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for title sequence 3d, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/title-sequence-3d/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "e482958bc50214fcfc79243440f040a2d5c06e5a",
+    "sha256": "80434f53a33b4c8b83c30d6e2288a137530fcaf51b82b0c9cc0872ca976e3205",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/title-sequence-3d/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
+  },
+  {
+    "id": "charlie947--vox-explainer",
+    "name": "vox-explainer",
+    "kind": "workflow-skill",
+    "summary": "Motion production workflow for vox explainer, with a focused creative and delivery brief.",
+    "families": [],
+    "capabilities": [
+      "motion-graphics",
+      "editable-code"
+    ],
+    "portability": "agent-portable",
+    "requires": [
+      "renderer-see-upstream"
+    ],
+    "curation_tier": "supporting",
+    "repository": "charlie947/motion-graphics-skills",
+    "path": "skills/vox-explainer/SKILL.md",
+    "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+    "blob_sha": "a6fdadb158bca06300e806fa7a36f6a71cbcc609",
+    "sha256": "8e4066d59fc71f94f7ec82ebc21965cc44372809c4ce77b5b466dc9d7f9c9606",
+    "url": "https://github.com/charlie947/motion-graphics-skills/blob/4cd156acdad0483884867c2d5a22268db66099d1/skills/vox-explainer/SKILL.md",
+    "repository_license": "MIT",
+    "declared_skill_license": null,
+    "evidence": "path-and-metadata-inspected",
+    "checked_at": "2026-10-01",
+    "runtime_tested": false,
+    "warnings": [
+      "Read the upstream runtime and sibling-skill requirements before installation.",
+      "Static inspection only; rendering and output quality were not tested."
+    ],
+    "provider_scope": [
+      "any"
+    ],
+    "model_binding": "not-model-specific"
   }
 ]

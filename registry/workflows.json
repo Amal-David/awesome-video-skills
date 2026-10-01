@@ -1065,5 +1065,359 @@
         "next": null
       }
     ]
+  },
+  {
+    "id": "inpaint",
+    "lane": "generative",
+    "requires": [
+      "inpainting"
+    ],
+    "summary": "Generate changes inside a source-video mask.",
+    "inputs": [
+      "authorized-source-media",
+      "task-specific-control"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "action": "Record assets, rights, exact copy, duration, output format, budget and privacy constraints.",
+        "output": "brief.json",
+        "next": "route"
+      },
+      {
+        "id": "route",
+        "action": "Apply hard capability constraints, then recency and workflow fit; never substitute a requested model silently.",
+        "output": "route.json",
+        "next": "preflight"
+      },
+      {
+        "id": "preflight",
+        "action": "Read the chosen model/engine guide and live provider schema. Check account, region, license, dimensions, joint duration/fps constraints, tool availability and cost ceiling.",
+        "output": "preflight.json",
+        "next": "compose",
+        "on_failure": "stop-and-report"
+      },
+      {
+        "id": "compose",
+        "action": "Generate changes inside a source-video mask. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "output": "shot-plan.json",
+        "next": "draft"
+      },
+      {
+        "id": "draft",
+        "action": "With execution authorization, create one representative draft through the inspected tool. Preserve request, endpoint/version, seed and job ID; do not duplicate an uncertain paid request.",
+        "output": "draft-manifest.json",
+        "next": "review",
+        "on_failure": "inspect-job-before-retry"
+      },
+      {
+        "id": "review",
+        "action": "Inspect actual playback plus contact-sheet frames and audio. Check requested content, continuity, text, timing, rights and technical metadata.",
+        "output": "qa.json",
+        "next": "deliver",
+        "on_failure": "revise-only-the-failing-stage"
+      },
+      {
+        "id": "deliver",
+        "action": "Deliver the media, editable project where relevant, provenance, render settings and QC report. Publishing is a separate permission.",
+        "output": "delivery-manifest.json",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "outpaint",
+    "lane": "generative",
+    "requires": [
+      "outpainting"
+    ],
+    "summary": "Generate content outside the source-video frame.",
+    "inputs": [
+      "authorized-source-media",
+      "task-specific-control"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "action": "Record assets, rights, exact copy, duration, output format, budget and privacy constraints.",
+        "output": "brief.json",
+        "next": "route"
+      },
+      {
+        "id": "route",
+        "action": "Apply hard capability constraints, then recency and workflow fit; never substitute a requested model silently.",
+        "output": "route.json",
+        "next": "preflight"
+      },
+      {
+        "id": "preflight",
+        "action": "Read the chosen model/engine guide and live provider schema. Check account, region, license, dimensions, joint duration/fps constraints, tool availability and cost ceiling.",
+        "output": "preflight.json",
+        "next": "compose",
+        "on_failure": "stop-and-report"
+      },
+      {
+        "id": "compose",
+        "action": "Generate content outside the source-video frame. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "output": "shot-plan.json",
+        "next": "draft"
+      },
+      {
+        "id": "draft",
+        "action": "With execution authorization, create one representative draft through the inspected tool. Preserve request, endpoint/version, seed and job ID; do not duplicate an uncertain paid request.",
+        "output": "draft-manifest.json",
+        "next": "review",
+        "on_failure": "inspect-job-before-retry"
+      },
+      {
+        "id": "review",
+        "action": "Inspect actual playback plus contact-sheet frames and audio. Check requested content, continuity, text, timing, rights and technical metadata.",
+        "output": "qa.json",
+        "next": "deliver",
+        "on_failure": "revise-only-the-failing-stage"
+      },
+      {
+        "id": "deliver",
+        "action": "Deliver the media, editable project where relevant, provenance, render settings and QC report. Publishing is a separate permission.",
+        "output": "delivery-manifest.json",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "restore",
+    "lane": "generative",
+    "requires": [
+      "video-restoration"
+    ],
+    "summary": "Generative footage restoration and detail refinement.",
+    "inputs": [
+      "authorized-source-media",
+      "task-specific-control"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "action": "Record assets, rights, exact copy, duration, output format, budget and privacy constraints.",
+        "output": "brief.json",
+        "next": "route"
+      },
+      {
+        "id": "route",
+        "action": "Apply hard capability constraints, then recency and workflow fit; never substitute a requested model silently.",
+        "output": "route.json",
+        "next": "preflight"
+      },
+      {
+        "id": "preflight",
+        "action": "Read the chosen model/engine guide and live provider schema. Check account, region, license, dimensions, joint duration/fps constraints, tool availability and cost ceiling.",
+        "output": "preflight.json",
+        "next": "compose",
+        "on_failure": "stop-and-report"
+      },
+      {
+        "id": "compose",
+        "action": "Generative footage restoration and detail refinement. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "output": "shot-plan.json",
+        "next": "draft"
+      },
+      {
+        "id": "draft",
+        "action": "With execution authorization, create one representative draft through the inspected tool. Preserve request, endpoint/version, seed and job ID; do not duplicate an uncertain paid request.",
+        "output": "draft-manifest.json",
+        "next": "review",
+        "on_failure": "inspect-job-before-retry"
+      },
+      {
+        "id": "review",
+        "action": "Inspect actual playback plus contact-sheet frames and audio. Check requested content, continuity, text, timing, rights and technical metadata.",
+        "output": "qa.json",
+        "next": "deliver",
+        "on_failure": "revise-only-the-failing-stage"
+      },
+      {
+        "id": "deliver",
+        "action": "Deliver the media, editable project where relevant, provenance, render settings and QC report. Publishing is a separate permission.",
+        "output": "delivery-manifest.json",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "exr-hdr",
+    "lane": "generative",
+    "requires": [
+      "exr-hdr-roundtrip"
+    ],
+    "summary": "Preserve native EXR/HDR through a supported local pipeline.",
+    "inputs": [
+      "authorized-source-media",
+      "task-specific-control"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "action": "Record assets, rights, exact copy, duration, output format, budget and privacy constraints.",
+        "output": "brief.json",
+        "next": "route"
+      },
+      {
+        "id": "route",
+        "action": "Apply hard capability constraints, then recency and workflow fit; never substitute a requested model silently.",
+        "output": "route.json",
+        "next": "preflight"
+      },
+      {
+        "id": "preflight",
+        "action": "Read the chosen model/engine guide and live provider schema. Check account, region, license, dimensions, joint duration/fps constraints, tool availability and cost ceiling.",
+        "output": "preflight.json",
+        "next": "compose",
+        "on_failure": "stop-and-report"
+      },
+      {
+        "id": "compose",
+        "action": "Preserve native EXR/HDR through a supported local pipeline. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "output": "shot-plan.json",
+        "next": "draft"
+      },
+      {
+        "id": "draft",
+        "action": "With execution authorization, create one representative draft through the inspected tool. Preserve request, endpoint/version, seed and job ID; do not duplicate an uncertain paid request.",
+        "output": "draft-manifest.json",
+        "next": "review",
+        "on_failure": "inspect-job-before-retry"
+      },
+      {
+        "id": "review",
+        "action": "Inspect actual playback plus contact-sheet frames and audio. Check requested content, continuity, text, timing, rights and technical metadata.",
+        "output": "qa.json",
+        "next": "deliver",
+        "on_failure": "revise-only-the-failing-stage"
+      },
+      {
+        "id": "deliver",
+        "action": "Deliver the media, editable project where relevant, provenance, render settings and QC report. Publishing is a separate permission.",
+        "output": "delivery-manifest.json",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "dub",
+    "lane": "generative",
+    "requires": [
+      "dubbing"
+    ],
+    "summary": "Replace dialogue through a version-validated lip-sync adapter.",
+    "inputs": [
+      "authorized-source-media",
+      "task-specific-control"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "action": "Record assets, rights, exact copy, duration, output format, budget and privacy constraints.",
+        "output": "brief.json",
+        "next": "route"
+      },
+      {
+        "id": "route",
+        "action": "Apply hard capability constraints, then recency and workflow fit; never substitute a requested model silently.",
+        "output": "route.json",
+        "next": "preflight"
+      },
+      {
+        "id": "preflight",
+        "action": "Read the chosen model/engine guide and live provider schema. Check account, region, license, dimensions, joint duration/fps constraints, tool availability and cost ceiling.",
+        "output": "preflight.json",
+        "next": "compose",
+        "on_failure": "stop-and-report"
+      },
+      {
+        "id": "compose",
+        "action": "Replace dialogue through a version-validated lip-sync adapter. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "output": "shot-plan.json",
+        "next": "draft"
+      },
+      {
+        "id": "draft",
+        "action": "With execution authorization, create one representative draft through the inspected tool. Preserve request, endpoint/version, seed and job ID; do not duplicate an uncertain paid request.",
+        "output": "draft-manifest.json",
+        "next": "review",
+        "on_failure": "inspect-job-before-retry"
+      },
+      {
+        "id": "review",
+        "action": "Inspect actual playback plus contact-sheet frames and audio. Check requested content, continuity, text, timing, rights and technical metadata.",
+        "output": "qa.json",
+        "next": "deliver",
+        "on_failure": "revise-only-the-failing-stage"
+      },
+      {
+        "id": "deliver",
+        "action": "Deliver the media, editable project where relevant, provenance, render settings and QC report. Publishing is a separate permission.",
+        "output": "delivery-manifest.json",
+        "next": null
+      }
+    ]
+  },
+  {
+    "id": "foley",
+    "lane": "generative",
+    "requires": [
+      "video-to-audio"
+    ],
+    "summary": "Create synchronized sound effects for muted footage.",
+    "inputs": [
+      "authorized-source-media",
+      "task-specific-control"
+    ],
+    "steps": [
+      {
+        "id": "brief",
+        "action": "Record assets, rights, exact copy, duration, output format, budget and privacy constraints.",
+        "output": "brief.json",
+        "next": "route"
+      },
+      {
+        "id": "route",
+        "action": "Apply hard capability constraints, then recency and workflow fit; never substitute a requested model silently.",
+        "output": "route.json",
+        "next": "preflight"
+      },
+      {
+        "id": "preflight",
+        "action": "Read the chosen model/engine guide and live provider schema. Check account, region, license, dimensions, joint duration/fps constraints, tool availability and cost ceiling.",
+        "output": "preflight.json",
+        "next": "compose",
+        "on_failure": "stop-and-report"
+      },
+      {
+        "id": "compose",
+        "action": "Create synchronized sound effects for muted footage. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "output": "shot-plan.json",
+        "next": "draft"
+      },
+      {
+        "id": "draft",
+        "action": "With execution authorization, create one representative draft through the inspected tool. Preserve request, endpoint/version, seed and job ID; do not duplicate an uncertain paid request.",
+        "output": "draft-manifest.json",
+        "next": "review",
+        "on_failure": "inspect-job-before-retry"
+      },
+      {
+        "id": "review",
+        "action": "Inspect actual playback plus contact-sheet frames and audio. Check requested content, continuity, text, timing, rights and technical metadata.",
+        "output": "qa.json",
+        "next": "deliver",
+        "on_failure": "revise-only-the-failing-stage"
+      },
+      {
+        "id": "deliver",
+        "action": "Deliver the media, editable project where relevant, provenance, render settings and QC report. Publishing is a separate permission.",
+        "output": "delivery-manifest.json",
+        "next": null
+      }
+    ]
   }
 ]

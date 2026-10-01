@@ -143,5 +143,55 @@
     "id": "lora-training",
     "group": "local",
     "label": "lora training"
+  },
+  {
+    "id": "image-reference",
+    "group": "conditioning",
+    "label": "image reference"
+  },
+  {
+    "id": "video-reference",
+    "group": "conditioning",
+    "label": "video reference"
+  },
+  {
+    "id": "audio-reference",
+    "group": "conditioning",
+    "label": "audio reference"
+  },
+  {
+    "id": "inpainting",
+    "group": "specialized-local",
+    "label": "inpainting"
+  },
+  {
+    "id": "outpainting",
+    "group": "specialized-local",
+    "label": "outpainting"
+  },
+  {
+    "id": "video-restoration",
+    "group": "specialized-local",
+    "label": "video restoration"
+  },
+  {
+    "id": "exr-hdr-roundtrip",
+    "group": "specialized-local",
+    "label": "exr hdr roundtrip"
+  },
+  {
+    "id": "dubbing",
+    "group": "specialized-local",
+    "label": "dubbing"
+  },
+  {
+    "id": "video-to-audio",
+    "group": "specialized-local",
+    "label": "video to audio"
+  },
+  {
+    "id": "automatic-duration",
+    "group": "generation",
+    "label": "model-predicted duration"
   }
 ]

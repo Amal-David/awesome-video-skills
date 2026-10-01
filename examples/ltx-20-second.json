@@ -1,0 +1,8 @@
+{
+  "task": "generate",
+  "model": "ltx-2-5-fast",
+  "duration": 20,
+  "fps": 24,
+  "resolution": "1080p",
+  "as_of": "2026-10-01"
+}

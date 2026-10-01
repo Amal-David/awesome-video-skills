@@ -1,0 +1,10 @@
+{
+  "task": "hybrid",
+  "model": "seedance",
+  "provider": "byteplus",
+  "require": [
+    "exact-text"
+  ],
+  "duration": 15,
+  "as_of": "2026-10-01"
+}

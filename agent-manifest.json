@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "project-specific-discovery-manifest",
+  "entrypoint": "skills/video-router/SKILL.md",
+  "navigation": "registry/navigation.json",
+  "retrieval": "registry/retrieval.jsonl",
+  "route_argv": [
+    "python3",
+    "scripts/avs.py",
+    "route",
+    "--request",
+    "{request_file}"
+  ],
+  "request_schema": "schemas/request.schema.json",
+  "result_schema": "schemas/result.schema.json",
+  "routing_network_access": false,
+  "minimum_python": "3.10"
+}

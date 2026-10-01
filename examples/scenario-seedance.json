@@ -1,0 +1,10 @@
+{
+  "task": "reference",
+  "model": "scenario-seedance",
+  "available_tools": [
+    "scenario-mcp",
+    "scenario-core-skill"
+  ],
+  "reference_images": 2,
+  "as_of": "2026-10-01"
+}

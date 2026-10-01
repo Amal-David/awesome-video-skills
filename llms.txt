@@ -1,0 +1,29 @@
+# Awesome Video Skills
+
+> Model-specific video and motion workflows for file-reading agents. Offline curation and routing, not a generation service.
+
+## Start
+- [Agent instructions](AGENTS.md): task, controller and provider separation.
+- [Portable router skill](skills/video-router/SKILL.md): progressive disclosure and routing commands.
+- [Decision flow](docs/decision-flow.md): choose procedural, generative, editing or hybrid work.
+- [Controller profiles](docs/agents.md): Claude Opus 5.5, GPT-6 Astra and host discovery.
+
+## Model and skill discovery
+- [Model index](docs/model-index.md): exact versions, runtimes and backend surfaces.
+- [Upstream skill catalog](docs/catalog.md): pinned paths, evidence and portability.
+- [Motion graphics](docs/motion.md): Remotion, Hyperframes, Canvas, Manim and Blender.
+- [Quality review](docs/quality.md): playback, audio, content and encoded metadata.
+
+## Machine-readable interfaces
+- [Discovery manifest](agent-manifest.json): project-specific navigation and CLI contract.
+- [Navigation graph](registry/navigation.json): lanes, families, versions, providers and skills.
+- [Retrieval chunks](registry/retrieval.jsonl): stable IDs and content hashes for indexing.
+- [Request schema](schemas/request.schema.json): structured constraints.
+- [Result schema](schemas/result.schema.json): candidate plans and explicit no-match responses.
+- [Retrieval guide](docs/retrieval.md): BM25, structured filters and RAG ingestion.
+
+## Evidence
+- [Research coverage](research/coverage.md): sources, access gaps and limits.
+- [Source registry](registry/sources.json): primary documentation.
+- [Pin verification](research/pin-verification.json): immutable path/blob checks.
+- [Security](SECURITY.md): inspection and execution boundaries.

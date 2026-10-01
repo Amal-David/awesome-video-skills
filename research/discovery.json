@@ -1,0 +1,23 @@
+{
+  "snapshot_date": "2026-10-01",
+  "note": "Representative discovery trail, not a complete search log. Social/secondary sources are not capability authority.",
+  "records": [
+    {"platform":"Hacker News","url":"https://news.ycombinator.com/item?id=47902856","access":"search-visible creator/thread text","outcome":"Hyperframes and code-animation leads; verified upstream repositories separately."},
+    {"platform":"Hacker News","url":"https://news.ycombinator.com/item?id=47822361","access":"search-visible thread text","outcome":"Additional Hyperframes context; not a separate skill counted twice."},
+    {"platform":"Hacker News","url":"https://news.ycombinator.com/item?id=47871828","access":"search-visible creator/thread text","outcome":"Cartoon Studio and creator demo links; followed Jellypod-Inc/cartoon-studio."},
+    {"platform":"Hacker News","url":"https://news.ycombinator.com/item?id=49815095","access":"search-visible creator/thread text","outcome":"RxFilm lead; rxtech-lab/film-workflow is a project, not automatically an Agent Skill."},
+    {"platform":"Hacker News","url":"https://news.ycombinator.com/item?id=48770383","access":"search-visible thread text","outcome":"Provider/model discovery discussion; discovery idea rather than certified runtime."},
+    {"platform":"Hacker News","url":"https://news.ycombinator.com/item?id=48939524","access":"search-visible thread text","outcome":"Music-video workflow critique informed the need for playback and audio QA."},
+    {"platform":"X","url":"https://x.com/deepwhitman/status/2046425875789631701","access":"linked from a creator's HN context; original not independently read","outcome":"Demo discovery only; no benchmark or capability promotion."},
+    {"platform":"X","url":"https://x.com/deepwhitman/status/2047040471579697512","access":"linked from a creator's HN context; original not independently read","outcome":"Demo discovery only; not treated as a verified installable skill."},
+    {"platform":"X/Reddit secondary roundup","url":"https://www.latent.space/p/ainews-opus-55-is-good-at-explainer","access":"secondary coverage","outcome":"Recent code-motion leads. The roundup's own claimed search scope is not attributed to this project."},
+    {"platform":"Reddit secondary report","url":"https://aifrontierpost.com/articles/opus-5-5-sydney-snes-video-from-code/","access":"secondary coverage; original thread not independently resolved","outcome":"Code-video use case discovery; not evidence of measured model quality."},
+    {"platform":"Skill directory","url":"https://claudeers.com/motion-graphics-skills","access":"directory discovery; upstream tree and skill blobs subsequently inspected","outcome":"charlie947/motion-graphics-skills: 13 pinned paths added."},
+    {"platform":"Skill directory","url":"https://skills.sh/","access":"directory/search discovery","outcome":"Candidate skill discovery; upstream files remain the provenance source."},
+    {"platform":"Demo directory","url":"https://claudevideo.org/","access":"directory/search discovery","outcome":"Motion examples; no claim that all videos were played or analyzed."},
+    {"platform":"Skill directory","url":"https://claudeskills.info/","access":"directory/search discovery","outcome":"Video inspection skill lead; bradautomates/claude-video checked upstream."},
+    {"platform":"GitHub supporting project","url":"https://github.com/JohnHeibel/ClaudeAnimationBase","access":"repository metadata and tree inspected","outcome":"MIT-licensed starter with ANIMATION_GUIDE.md, not a SKILL.md package."},
+    {"platform":"GitHub supporting project","url":"https://github.com/diggerhq/shipvideo","access":"repository metadata and tree inspected","outcome":"Project lead; no SKILL.md found in the inspected tree and no machine-readable license resolved."},
+    {"platform":"GitHub integration","url":"https://github.com/ahujasid/blender-mcp","access":"repository metadata and tree inspected","outcome":"Blender integration, not a video model or standalone Agent Skill."}
+  ]
+}

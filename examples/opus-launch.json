@@ -1,0 +1,7 @@
+{
+  "task": "motion",
+  "agent": "opus-5-5",
+  "host": "claude-code",
+  "query": "A short launch video with kinetic typography",
+  "as_of": "2026-10-01"
+}

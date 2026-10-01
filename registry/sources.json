@@ -295,5 +295,68 @@
     "published": null,
     "checked_at": "2026-10-01",
     "note": ""
+  },
+  {
+    "id": "chatcut-video-contract",
+    "title": "Provider-owned skill contract: chatcut-inc--video-gen",
+    "url": "https://github.com/ChatCut-Inc/agent-plugin/blob/877b9177144feeecdef0da70f0e4d5cb760f6037/claude/skills/video-gen/SKILL.md",
+    "kind": "provider-skill-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Pinned provider adapter documentation; do not assume direct-API parity."
+  },
+  {
+    "id": "scenario-seedance-contract",
+    "title": "Provider-owned skill contract: scenario-labs--scenario-seedance",
+    "url": "https://github.com/scenario-labs/skills/blob/d87071d22edb5eb5871c9034f89cada518657891/skills/scenario-seedance/SKILL.md",
+    "kind": "provider-skill-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Pinned provider adapter documentation; do not assume direct-API parity."
+  },
+  {
+    "id": "ltx25-inout",
+    "title": "LTX 2.5 in/outpainting workflow",
+    "url": "https://docs.ltx.io/open-source-model/feature-guides/editing-effects/in-outpainting",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Primary documentation retrieved as search-visible text; full-page fetch was not consistently available."
+  },
+  {
+    "id": "ltx25-exr",
+    "title": "LTX 2.5 native EXR pipeline",
+    "url": "https://docs.ltx.io/open-source-model/usage-guides/working-with-exr-hdr",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Primary documentation retrieved as search-visible text; full-page fetch was not consistently available."
+  },
+  {
+    "id": "ltx25-restore",
+    "title": "LTX 2.5 generative refinement and restoration",
+    "url": "https://docs.ltx.io/open-source-model/vfx-post-production/refine-and-restore",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Primary documentation retrieved as search-visible text; full-page fetch was not consistently available."
+  },
+  {
+    "id": "ltx23-dubit",
+    "title": "Dub-It compatibility warning",
+    "url": "https://docs.ltx.io/open-source-model/feature-guides/audio/dub-it-beta",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Primary documentation retrieved as search-visible text; full-page fetch was not consistently available."
+  },
+  {
+    "id": "ltx23-foley",
+    "title": "Foley compatibility warning",
+    "url": "https://docs.ltx.io/open-source-model/feature-guides/audio/video-to-audio-foley",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-01",
+    "note": "Primary documentation retrieved as search-visible text; full-page fetch was not consistently available."
   }
 ]

@@ -1,0 +1,11 @@
+{
+  "task": "reference",
+  "model": "h3-max",
+  "provider": "fal",
+  "reference_images": 2,
+  "reference_videos": 1,
+  "reference_video_seconds": 10,
+  "duration": 10,
+  "resolution": "768p",
+  "as_of": "2026-10-01"
+}

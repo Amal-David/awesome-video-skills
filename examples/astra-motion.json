@@ -1,0 +1,11 @@
+{
+  "task": "motion",
+  "agent": "astra",
+  "host": "codex",
+  "engine": "remotion",
+  "require": [
+    "exact-text",
+    "editable-code"
+  ],
+  "as_of": "2026-10-01"
+}

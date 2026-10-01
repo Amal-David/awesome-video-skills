@@ -20,7 +20,10 @@
       "multishot",
       "video-editing",
       "extend",
-      "motion-transfer"
+      "motion-transfer",
+      "image-reference",
+      "video-reference",
+      "audio-reference"
     ],
     "unsupported_capabilities": [],
     "api_model_ids": [
@@ -55,7 +58,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/seedance.md",
-    "skill_id": "video-seedance"
+    "skill_id": "video-seedance",
+    "model_version": "2.5"
   },
   {
     "id": "minimax-h3-fal",
@@ -74,7 +78,10 @@
       "first-last-frame",
       "native-audio",
       "multishot",
-      "motion-transfer"
+      "motion-transfer",
+      "image-reference",
+      "video-reference",
+      "audio-reference"
     ],
     "unsupported_capabilities": [
       "audio-only-reference",
@@ -122,7 +129,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/minimax.md",
-    "skill_id": "video-minimax"
+    "skill_id": "video-minimax",
+    "model_version": "H3 Max"
   },
   {
     "id": "minimax-h3-local-fl",
@@ -145,9 +153,7 @@
       "reference-to-video",
       "audio-only-reference"
     ],
-    "api_model_ids": [
-      "MiniMaxAI/MiniMax-H3:H3-Base-FL2VA"
-    ],
+    "api_model_ids": [],
     "source_ids": [
       "h3-open",
       "h3-card"
@@ -177,7 +183,11 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/minimax.md",
-    "skill_id": "video-minimax"
+    "skill_id": "video-minimax",
+    "model_version": "H3 Max",
+    "artifact_ids": [
+      "MiniMaxAI/MiniMax-H3:H3-Base-FL2VA"
+    ]
   },
   {
     "id": "minimax-h3-local-ref",
@@ -193,15 +203,16 @@
       "reference-to-video",
       "native-audio",
       "motion-transfer",
-      "local-weights"
+      "local-weights",
+      "image-reference",
+      "video-reference",
+      "audio-reference"
     ],
     "unsupported_capabilities": [
       "audio-only-reference",
       "first-last-frame"
     ],
-    "api_model_ids": [
-      "MiniMaxAI/MiniMax-H3:H3-Base-Ref2VA"
-    ],
+    "api_model_ids": [],
     "source_ids": [
       "h3-open",
       "h3-card"
@@ -235,7 +246,11 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/minimax.md",
-    "skill_id": "video-minimax"
+    "skill_id": "video-minimax",
+    "model_version": "H3 Max",
+    "artifact_ids": [
+      "MiniMaxAI/MiniMax-H3:H3-Base-Ref2VA"
+    ]
   },
   {
     "id": "h3-max-fal",
@@ -253,7 +268,10 @@
       "reference-to-video",
       "first-last-frame",
       "native-audio",
-      "audio-only-reference"
+      "audio-only-reference",
+      "image-reference",
+      "video-reference",
+      "audio-reference"
     ],
     "unsupported_capabilities": [
       "video-editing",
@@ -305,7 +323,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/minimax.md",
-    "skill_id": "video-minimax"
+    "skill_id": "video-minimax",
+    "model_version": "H3 Max"
   },
   {
     "id": "h3-max-turbo-fal",
@@ -357,7 +376,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/minimax.md",
-    "skill_id": "video-minimax"
+    "skill_id": "video-minimax",
+    "model_version": "H3 Max Turbo"
   },
   {
     "id": "ltx-2-5-fast-api",
@@ -374,7 +394,9 @@
       "image-to-video",
       "audio-driven-video",
       "native-audio",
-      "first-last-frame"
+      "first-last-frame",
+      "multishot",
+      "automatic-duration"
     ],
     "unsupported_capabilities": [
       "retake",
@@ -449,6 +471,9 @@
             10
           ]
         }
+      ],
+      "auto_duration_forbidden_tasks": [
+        "transition"
       ]
     },
     "aliases": [
@@ -458,12 +483,19 @@
     ],
     "notes": [
       "Duration profiles describe text/image generation; audio-driven duration follows input audio and requires separate preflight.",
-      "Auto-duration does not mean unlimited duration."
+      "Auto-duration does not mean unlimited duration.",
+      "For automatic duration on the API, duration must explicitly be null; omission is not equivalent. Auto-duration cannot be combined with last-frame anchoring on image-to-video."
     ],
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/ltx.md",
-    "skill_id": "video-ltx"
+    "skill_id": "video-ltx",
+    "model_version": "2.5",
+    "operation_limits": {
+      "audio-driven": {
+        "duration_follows_input_audio": true
+      }
+    }
   },
   {
     "id": "ltx-2-5-pro-api",
@@ -480,7 +512,9 @@
       "image-to-video",
       "audio-driven-video",
       "native-audio",
-      "first-last-frame"
+      "first-last-frame",
+      "multishot",
+      "automatic-duration"
     ],
     "unsupported_capabilities": [
       "retake",
@@ -520,7 +554,10 @@
         }
       ],
       "min_seconds": 6,
-      "max_seconds": 10
+      "max_seconds": 10,
+      "auto_duration_forbidden_tasks": [
+        "transition"
+      ]
     },
     "aliases": [
       "ltx-2-5",
@@ -529,12 +566,19 @@
     ],
     "notes": [
       "Do not copy the Fast 20-second mode into Pro.",
-      "A2V follows the source audio; inspect its endpoint separately."
+      "A2V follows the source audio; inspect its endpoint separately.",
+      "For automatic duration on the API, duration must explicitly be null; omission is not equivalent. Auto-duration cannot be combined with last-frame anchoring on image-to-video."
     ],
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/ltx.md",
-    "skill_id": "video-ltx"
+    "skill_id": "video-ltx",
+    "model_version": "2.5",
+    "operation_limits": {
+      "audio-driven": {
+        "duration_follows_input_audio": true
+      }
+    }
   },
   {
     "id": "ltx-2-5-local",
@@ -553,13 +597,11 @@
       "multishot",
       "local-weights",
       "lora-inference",
-      "lora-training"
+      "lora-training",
+      "automatic-duration"
     ],
     "unsupported_capabilities": [],
-    "api_model_ids": [
-      "Lightricks/LTX-2.5",
-      "Lightricks/LTX-2.5-Diffusers"
-    ],
+    "api_model_ids": [],
     "source_ids": [
       "ltx25-card",
       "ltx25-diffusers"
@@ -584,12 +626,18 @@
       "Open-weight release date is not inferred from the API release or repository update date.",
       "Checkpoint, encoder, decoder, scheduler and LoRA compatibility must be locked together.",
       "Int8 ComfyUI and Diffusers artifacts are not interchangeable.",
-      "VRAM and commercial license eligibility are preflight checks, not promises."
+      "VRAM and commercial license eligibility are preflight checks, not promises.",
+      "Specialized in/outpainting, EXR, restore, Dub-It and Foley routes are separate records; plain local weights do not establish adapter compatibility."
     ],
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/ltx.md",
-    "skill_id": "video-ltx"
+    "skill_id": "video-ltx",
+    "model_version": "2.5",
+    "artifact_ids": [
+      "Lightricks/LTX-2.5",
+      "Lightricks/LTX-2.5-Diffusers"
+    ]
   },
   {
     "id": "ltx-2-3-pro-api",
@@ -631,7 +679,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/ltx.md",
-    "skill_id": "video-ltx"
+    "skill_id": "video-ltx",
+    "model_version": "2.3"
   },
   {
     "id": "gemini-omni-1-1-flash",
@@ -651,7 +700,8 @@
       "native-audio",
       "video-editing",
       "stateful-editing",
-      "extend"
+      "extend",
+      "image-reference"
     ],
     "unsupported_capabilities": [],
     "api_model_ids": [
@@ -694,7 +744,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/gemini-omni.md",
-    "skill_id": "video-gemini-omni"
+    "skill_id": "video-gemini-omni",
+    "model_version": "1.1"
   },
   {
     "id": "flux-3-video",
@@ -755,7 +806,17 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/flux.md",
-    "skill_id": "video-flux"
+    "skill_id": "video-flux",
+    "model_version": "3",
+    "operation_limits": {
+      "extend": {
+        "min_seconds": 5,
+        "max_seconds": 15,
+        "fps": [
+          24
+        ]
+      }
+    }
   },
   {
     "id": "wan-3-0",
@@ -775,7 +836,10 @@
       "native-audio",
       "audio-only-reference",
       "document-input",
-      "web-input"
+      "web-input",
+      "image-reference",
+      "video-reference",
+      "audio-reference"
     ],
     "unsupported_capabilities": [],
     "api_model_ids": [
@@ -820,7 +884,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/wan.md",
-    "skill_id": "video-wan"
+    "skill_id": "video-wan",
+    "model_version": "3.0"
   },
   {
     "id": "wan-3-0-prime",
@@ -840,7 +905,10 @@
       "native-audio",
       "audio-only-reference",
       "document-input",
-      "web-input"
+      "web-input",
+      "image-reference",
+      "video-reference",
+      "audio-reference"
     ],
     "unsupported_capabilities": [],
     "api_model_ids": [
@@ -883,7 +951,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/wan.md",
-    "skill_id": "video-wan"
+    "skill_id": "video-wan",
+    "model_version": "3.0"
   },
   {
     "id": "wan-2-7-videoedit",
@@ -926,7 +995,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/wan.md",
-    "skill_id": "video-wan"
+    "skill_id": "video-wan",
+    "model_version": "2.7"
   },
   {
     "id": "happyhorse-1-1-t2v",
@@ -974,7 +1044,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/happyhorse.md",
-    "skill_id": "video-happyhorse"
+    "skill_id": "video-happyhorse",
+    "model_version": "1.1"
   },
   {
     "id": "happyhorse-1-1-i2v",
@@ -1022,7 +1093,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/happyhorse.md",
-    "skill_id": "video-happyhorse"
+    "skill_id": "video-happyhorse",
+    "model_version": "1.1"
   },
   {
     "id": "happyhorse-1-1-r2v",
@@ -1036,7 +1108,8 @@
     "runtime": "cloud",
     "capabilities": [
       "reference-to-video",
-      "native-audio"
+      "native-audio",
+      "image-reference"
     ],
     "unsupported_capabilities": [],
     "api_model_ids": [
@@ -1070,7 +1143,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/happyhorse.md",
-    "skill_id": "video-happyhorse"
+    "skill_id": "video-happyhorse",
+    "model_version": "1.1"
   },
   {
     "id": "happyhorse-1-0-edit",
@@ -1113,7 +1187,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/happyhorse.md",
-    "skill_id": "video-happyhorse"
+    "skill_id": "video-happyhorse",
+    "model_version": "1.0"
   },
   {
     "id": "kling-3-0",
@@ -1161,7 +1236,8 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/kling.md",
-    "skill_id": "video-kling"
+    "skill_id": "video-kling",
+    "model_version": "3.0"
   },
   {
     "id": "kling-3-0-turbo-standard",
@@ -1203,6 +1279,396 @@
     "evidence": "primary-source-documented",
     "runtime_tested": false,
     "playbook": "models/kling.md",
-    "skill_id": "video-kling"
+    "skill_id": "video-kling",
+    "model_version": "3.0"
+  },
+  {
+    "id": "seedance-2-5-chatcut",
+    "name": "Seedance 2.5 / ChatCut",
+    "family": "seedance",
+    "provider": "chatcut",
+    "variant": "",
+    "release_date": "2026-07-31",
+    "release_date_kind": "underlying-model-release",
+    "checked_at": "2026-10-01",
+    "runtime": "cloud",
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "reference-to-video",
+      "first-last-frame",
+      "native-audio",
+      "audio-only-reference",
+      "image-reference",
+      "video-reference",
+      "audio-reference",
+      "video-editing",
+      "extend"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [
+      "seedance-2-5"
+    ],
+    "source_ids": [
+      "chatcut-video-contract",
+      "seed25-launch"
+    ],
+    "novel_abilities": [
+      "Seedance 2.5 integration with editor job tracking",
+      "Documented 50-reference adapter ceiling"
+    ],
+    "limits": {
+      "min_seconds": 4,
+      "max_seconds": 30,
+      "max_reference_files": 50
+    },
+    "aliases": [
+      "seedance",
+      "seedance-2-5",
+      "chatcut-seedance"
+    ],
+    "notes": [
+      "Release date refers to the underlying model, not verified adapter availability.",
+      "Resolve the live tool schema; direct-provider field names and capabilities must not be inherited."
+    ],
+    "evidence": "provider-skill-documented",
+    "runtime_tested": false,
+    "playbook": "models/seedance.md",
+    "skill_id": "video-seedance",
+    "required_tools": [
+      "chatcut-mcp",
+      "chatcut-project"
+    ],
+    "surface_availability_date": null,
+    "model_version": "2.5"
+  },
+  {
+    "id": "h3-max-chatcut",
+    "name": "MiniMax H3 Max / ChatCut",
+    "family": "minimax",
+    "provider": "chatcut",
+    "variant": "",
+    "release_date": "2026-08-27",
+    "release_date_kind": "underlying-model-release",
+    "checked_at": "2026-10-01",
+    "runtime": "cloud",
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "first-last-frame",
+      "native-audio"
+    ],
+    "unsupported_capabilities": [
+      "reference-to-video",
+      "audio-only-reference"
+    ],
+    "api_model_ids": [
+      "minimax-h3-max"
+    ],
+    "source_ids": [
+      "chatcut-video-contract",
+      "h3max-launch"
+    ],
+    "novel_abilities": [
+      "Text/keyframe H3 Max integration inside ChatCut",
+      "Narrower reference and resolution support than fal"
+    ],
+    "limits": {
+      "min_seconds": 5,
+      "max_seconds": 15,
+      "resolutions": [
+        "480p",
+        "768p"
+      ]
+    },
+    "aliases": [
+      "h3-max",
+      "minimax-h3-max",
+      "chatcut-h3-max"
+    ],
+    "notes": [
+      "Release date refers to the underlying model, not verified adapter availability.",
+      "Resolve the live tool schema; direct-provider field names and capabilities must not be inherited."
+    ],
+    "evidence": "provider-skill-documented",
+    "runtime_tested": false,
+    "playbook": "models/minimax.md",
+    "skill_id": "video-minimax",
+    "required_tools": [
+      "chatcut-mcp",
+      "chatcut-project"
+    ],
+    "surface_availability_date": null,
+    "model_version": "H3 Max"
+  },
+  {
+    "id": "seedance-2-5-scenario",
+    "name": "Seedance 2.5 / Scenario",
+    "family": "seedance",
+    "provider": "scenario",
+    "variant": "",
+    "release_date": "2026-07-31",
+    "release_date_kind": "underlying-model-release",
+    "checked_at": "2026-10-01",
+    "runtime": "cloud",
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "reference-to-video",
+      "first-last-frame",
+      "native-audio",
+      "audio-only-reference",
+      "image-reference",
+      "video-reference",
+      "audio-reference",
+      "video-editing",
+      "extend"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [],
+    "source_ids": [
+      "scenario-seedance-contract",
+      "seed25-launch"
+    ],
+    "novel_abilities": [
+      "Live discovery and schema-driven Seedance 2.5 workflow",
+      "Adapter-specific input and edit-duration semantics"
+    ],
+    "limits": {},
+    "aliases": [
+      "seedance",
+      "seedance-2-5",
+      "scenario-seedance"
+    ],
+    "notes": [
+      "Release date refers to the underlying model, not verified adapter availability.",
+      "Resolve the live tool schema; direct-provider field names and capabilities must not be inherited."
+    ],
+    "evidence": "provider-skill-documented",
+    "runtime_tested": false,
+    "playbook": "models/seedance.md",
+    "skill_id": "video-seedance",
+    "required_tools": [
+      "scenario-mcp",
+      "scenario-core-skill"
+    ],
+    "surface_availability_date": null,
+    "model_version": "2.5"
+  },
+  {
+    "id": "ltx-2-5-local-inout",
+    "name": "LTX 2.5 / ComfyUI in-outpainting",
+    "family": "ltx",
+    "provider": "self-hosted",
+    "variant": "specialized-local-workflow",
+    "release_date": null,
+    "release_date_kind": "unknown",
+    "checked_at": "2026-10-01",
+    "runtime": "local",
+    "capabilities": [
+      "inpainting",
+      "outpainting",
+      "local-weights"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [],
+    "source_ids": [
+      "ltx25-inout"
+    ],
+    "novel_abilities": [
+      "In/outpainting uses a task-specific IC-LoRA and mask, not the plain generation pipeline."
+    ],
+    "limits": {},
+    "aliases": [
+      "ltx-2-5-local-inout",
+      "ltx-2-5"
+    ],
+    "notes": [
+      "In/outpainting uses a task-specific IC-LoRA and mask, not the plain generation pipeline.",
+      "The documented adapter is reused from LTX 2.3; pin it with the listed LTX 2.5 model stack."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/ltx.md",
+    "skill_id": "video-ltx",
+    "model_version": "2.5",
+    "artifact_ids": [],
+    "required_tools": [
+      "comfyui",
+      "ltx-comfy-nodes",
+      "compatible-checkpoints"
+    ]
+  },
+  {
+    "id": "ltx-2-5-python-exr",
+    "name": "LTX 2.5 / Python native EXR pipeline",
+    "family": "ltx",
+    "provider": "self-hosted",
+    "variant": "specialized-local-workflow",
+    "release_date": null,
+    "release_date_kind": "unknown",
+    "checked_at": "2026-10-01",
+    "runtime": "local",
+    "capabilities": [
+      "exr-hdr-roundtrip",
+      "local-weights"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [],
+    "source_ids": [
+      "ltx25-exr"
+    ],
+    "novel_abilities": [
+      "Native EXR preservation uses the Python pipeline; no ComfyUI native EXR flow was documented."
+    ],
+    "limits": {},
+    "aliases": [
+      "ltx-2-5-python-exr",
+      "ltx-2-5"
+    ],
+    "notes": [
+      "Native EXR preservation uses the Python pipeline; no ComfyUI native EXR flow was documented.",
+      "This is not the SDR-to-HDR IC-LoRA, whose 2.5 compatibility is still under development."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/ltx.md",
+    "skill_id": "video-ltx",
+    "model_version": "2.5",
+    "artifact_ids": [],
+    "required_tools": [
+      "ltx-python-pipeline",
+      "compatible-checkpoints"
+    ]
+  },
+  {
+    "id": "ltx-2-5-local-restore",
+    "name": "LTX 2.5 / ComfyUI Restore and Refine Details",
+    "family": "ltx",
+    "provider": "self-hosted",
+    "variant": "specialized-local-workflow",
+    "release_date": null,
+    "release_date_kind": "unknown",
+    "checked_at": "2026-10-01",
+    "runtime": "local",
+    "capabilities": [
+      "video-restoration",
+      "local-weights"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [],
+    "source_ids": [
+      "ltx25-restore"
+    ],
+    "novel_abilities": [
+      "Use the TiledFusion Upscale workflow and the task-specific adapters."
+    ],
+    "limits": {},
+    "aliases": [
+      "ltx-2-5-local-restore",
+      "ltx-2-5"
+    ],
+    "notes": [
+      "Use the TiledFusion Upscale workflow and the task-specific adapters.",
+      "Restored colors, detail and faces are generated interpretations, not recovered ground truth."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/ltx.md",
+    "skill_id": "video-ltx",
+    "model_version": "2.5",
+    "artifact_ids": [],
+    "required_tools": [
+      "comfyui",
+      "ltx-comfy-nodes",
+      "task-specific-adapters"
+    ]
+  },
+  {
+    "id": "ltx-2-3-local-dubit",
+    "name": "LTX 2.3 / Dub-It IC-LoRA beta",
+    "family": "ltx",
+    "provider": "self-hosted",
+    "variant": "specialized-local-workflow",
+    "release_date": null,
+    "release_date_kind": "unknown",
+    "checked_at": "2026-10-01",
+    "runtime": "local",
+    "capabilities": [
+      "dubbing",
+      "local-weights"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [],
+    "source_ids": [
+      "ltx23-dubit"
+    ],
+    "novel_abilities": [
+      "The official guide validates this on 2.3; 2.5 support remains in development."
+    ],
+    "limits": {},
+    "aliases": [
+      "ltx-2-3-local-dubit",
+      "ltx-2-3"
+    ],
+    "notes": [
+      "The official guide validates this on 2.3; 2.5 support remains in development.",
+      "Preserve authorized speaker identity and record consent; verify language and actual lip synchronization."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/ltx.md",
+    "skill_id": "video-ltx",
+    "model_version": "2.3",
+    "artifact_ids": [],
+    "required_tools": [
+      "comfyui",
+      "ltx-comfy-nodes",
+      "dubit-adapter"
+    ]
+  },
+  {
+    "id": "ltx-2-3-local-foley",
+    "name": "LTX 2.3 / Foley LoRA",
+    "family": "ltx",
+    "provider": "self-hosted",
+    "variant": "specialized-local-workflow",
+    "release_date": null,
+    "release_date_kind": "unknown",
+    "checked_at": "2026-10-01",
+    "runtime": "local",
+    "capabilities": [
+      "video-to-audio",
+      "local-weights"
+    ],
+    "unsupported_capabilities": [],
+    "api_model_ids": [],
+    "source_ids": [
+      "ltx23-foley"
+    ],
+    "novel_abilities": [
+      "Validated on 2.3, not 2.5; use a muted input clip and the dedicated Foley adapter."
+    ],
+    "limits": {},
+    "aliases": [
+      "ltx-2-3-local-foley",
+      "ltx-2-3"
+    ],
+    "notes": [
+      "Validated on 2.3, not 2.5; use a muted input clip and the dedicated Foley adapter.",
+      "This synthesizes sound effects, not speech or music, while preserving original video frames."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/ltx.md",
+    "skill_id": "video-ltx",
+    "model_version": "2.3",
+    "artifact_ids": [],
+    "required_tools": [
+      "comfyui",
+      "ltx-comfy-nodes",
+      "video-helper-suite",
+      "foley-adapter"
+    ]
   }
 ]
