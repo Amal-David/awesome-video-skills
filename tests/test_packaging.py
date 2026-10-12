@@ -69,7 +69,9 @@ class PackagingTests(unittest.TestCase):
 
     def test_native_skill_frontmatter(self):
         skills = list((ROOT / 'skills').glob('*/SKILL.md'))
-        self.assertEqual(len(skills), 11)
+        catalog = avs.load_catalog()
+        expected = {'video-router', 'video-motion', 'video-quality-review'} | {'video-' + row['family'] for row in catalog['models']}
+        self.assertEqual({file.parent.name for file in skills}, expected)
         for file in skills:
             text = file.read_text()
             self.assertTrue(text.startswith('---\n'))
@@ -84,5 +86,23 @@ class PackagingTests(unittest.TestCase):
 
     def test_manifest_counts(self):
         c = avs.load_catalog()
-        self.assertEqual(c['manifest']['counts']['upstream_skill_paths'], len(c['skills']))
-        self.assertEqual(c['manifest']['counts']['model_surfaces'], len(c['models']))
+        self.assertEqual(c['manifest']['counts'], {
+            'upstream_skill_paths': len(c['skills']),
+            'skill_repositories': len({s['repository'] for s in c['skills']}),
+            'model_surfaces': len(c['models']),
+            'engines': len(c['engines']),
+            'controllers': len(c['agents']),
+            'workflows': len(c['workflows']),
+            'native_skills': len(list((ROOT / 'skills').glob('*/SKILL.md'))),
+        })
+
+    def test_snapshot_and_counts_reach_published_indexes(self):
+        c = avs.load_catalog()
+        snapshot = c['manifest']['snapshot_date']
+        self.assertIn(snapshot, (ROOT / 'docs/model-index.md').read_text())
+        self.assertIn(str(len(c['skills'])) + ' pinned paths', (ROOT / 'docs/catalog.md').read_text())
+        self.assertIn(str(len(c['skills'])) + ' pinned upstream skill paths', (ROOT / 'README.md').read_text())
+        bundled = json.loads((ROOT / 'skills/video-router/references/registry/manifest.json').read_text())
+        self.assertEqual(bundled, c['manifest'])
+        for skill in (ROOT / 'skills').glob('*/SKILL.md'):
+            self.assertIn('snapshot: "' + snapshot + '"', skill.read_text())

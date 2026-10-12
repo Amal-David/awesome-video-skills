@@ -1,14 +1,31 @@
 # Awesome Video Skills
 
-**Find the right video workflow, not just another prompt.**
+**Choose a video workflow, load the right skills, and check the result.**
 
 An agent-navigable catalog for generated footage, code-authored motion graphics, editing and finishing. Start with the task, narrow to a model version and provider, then load a compatible skill and its execution checklist.
 
-**193 pinned upstream skill paths · 41 repositories · 29 model/backend/workflow surfaces · 24 workflows · 11 original installable skills**
+<!-- avs:stats:start -->
+**206 pinned upstream skill paths · 47 repositories · 31 model/backend/workflow surfaces · 24 workflows · 12 original installable skills**
 
-Research snapshot: **October 1, 2026**. Recent-model preference: **April 1–October 1, 2026**, with older capability-specific fallbacks retained. This is source-backed curation, not a model-quality leaderboard or certification of every upstream runtime.
+Catalog update: **2026-10-12**. Preferred model-release window: **2026-04-12–2026-10-12**. Each record retains its own evidence date; an update does not re-certify older entries.
+<!-- avs:stats:end -->
+
+This is source-backed curation with an offline router. Model quality, account access and upstream runtimes need their own checks.
 
 [Decision flow](docs/decision-flow.md) · [Model index](docs/model-index.md) · [Skill catalog](docs/catalog.md) · [Motion graphics](docs/motion.md) · [Research coverage](research/coverage.md)
+
+## Choose by the result you need
+
+| You want to make | Start with | Why this route |
+| --- | --- | --- |
+| An app launch, exact UI demo or animated chart | [Remotion / HyperFrames](docs/motion.md) | Keep copy, layout, timing and brand assets editable. |
+| Cinematic footage from a prompt or image | [Model index](docs/model-index.md) | Match the exact operation, reference inputs and provider limits. |
+| An edit to an existing shot | [Runway Aleph 2.0](docs/models/runway.md) or [LTX](docs/models/ltx.md) | Preserve a source-driven editing workflow; distinguish outpainting from temporal extension. |
+| A presenter or translated recording | [HeyGen workflows](docs/workflow-recipes.md#presenters-and-translation) | Separate identity setup, presenter generation, dubbing and subtitles. |
+| A researched explainer or narrated motion piece | [Workflow recipes](docs/workflow-recipes.md) | Combine source review, timed narration, visual composition and finishing. |
+| A better result from an existing skill | [Evaluation protocol](docs/evaluation.md) | Compare the production process and finished video, record failures, and retest a focused revision. |
+
+See the [October 12 research update](research/2026-10-12-update.md) for the new entries, corrections and deliberately deferred candidates.
 
 ## For agents: start here
 
@@ -30,14 +47,16 @@ python3 scripts/avs.py search 'kinetic typography' --kind skills --limit 5
 
 ## The hierarchy
 
-```text
-Controller: Opus 5.5 / GPT-6 Astra / another agent
-└── Task
-    ├── Procedural motion → renderer → motion craft skill
-    ├── Generated footage → family → version → provider → operation → skill
-    ├── Edit / retake / extend → compatible model surface → skill
-    └── Hybrid → generated footage + deterministic UI/text/branding
-        └── Preflight → draft → playback review → targeted revision → delivery
+```mermaid
+flowchart TD
+    Brief["Brief and constraints"] --> Task{"Type of work"}
+    Task --> Motion["Code motion: choose a renderer"]
+    Task --> Footage["Footage or edits: choose an operation"]
+    Task --> Hybrid["Hybrid: route both stages"]
+    Motion --> Plan["Load scoped skills and resolve prerequisites"]
+    Footage --> Plan
+    Hybrid --> Plan
+    Plan --> Review["Draft, inspect, revise and deliver"]
 ```
 
 Opus and Astra write or orchestrate the work; they are not video endpoints. A provider adapter is not the underlying model. Native generated sound is not input-audio conditioning. Motion transfer is not motion graphics. Those distinctions are encoded in the registry, not left to a long README footnote.
@@ -52,6 +71,7 @@ Opus and Astra write or orchestrate the work; they are not video endpoints. A pr
 | [Wan 3.0 / Prime](docs/models/wan.md) | Document/web context, multimodal creation and separate editing/local workflows. |
 | [HappyHorse](docs/models/happyhorse.md) | 1.1 creation endpoints vs the separately versioned 1.0 edit surface. |
 | [Kling 3.0](docs/models/kling.md) | Storyboard modes, tier distinctions and an older explicit-request fallback. |
+| [Runway Gen-4.5 / Aleph 2.0](docs/models/runway.md) | First-frame creation vs source-video editing; timed keyframes, integer durations, canvas expansion and professional output restrictions. |
 
 For code motion, choose among **Remotion, Hyperframes, Canvas/SVG/FFmpeg, Manim and Blender**. The curated upstream catalog includes maintainer-authored Remotion/Hyperframes skills, `brag`/`brag-slim`, iart’s specialized packs, and focused typography, chart, audio, launch-film and quality-review workflows. See the [motion guide](docs/motion.md) before selecting a renderer.
 
@@ -71,7 +91,7 @@ python3 scripts/install.py --skill video-router --target .agents/skills --apply
 python3 scripts/install.py --skill video-ltx --target .claude/skills --apply
 ```
 
-Available original skills: `video-router`, `video-motion`, `video-quality-review`, `video-minimax`, `video-seedance`, `video-ltx`, `video-gemini-omni`, `video-flux`, `video-wan`, and `video-happyhorse`, plus `video-kling`.
+Available original skills: `video-router`, `video-motion`, `video-quality-review`, `video-minimax`, `video-seedance`, `video-ltx`, `video-gemini-omni`, `video-flux`, `video-wan`, `video-happyhorse`, `video-kling`, and `video-runway`.
 
 The installed router includes its own catalog, guides and CLI. Use the actual installed skill directory when invoking its script. For another project, pass that project’s skill directory as `--target`. Host auto-loading follows the host’s own rules; `llms.txt` alone does not guarantee discovery.
 
@@ -92,7 +112,7 @@ The first request above deliberately returns `no_compatible_route`. A supported 
 
 | Area | Purpose |
 | --- | --- |
-| `skills/` | Eleven original, installable router/model/motion/review skills. |
+| `skills/` | Original, installable router/model/motion/review skills, each with scoped references. |
 | `registry/` | Source-backed capabilities, versions, providers, skills, workflow graph and retrieval chunks. |
 | `docs/` | Model playbooks, upstream skill cards, architecture and retrieval instructions. |
 | `scripts/` | Offline router, builder, safe local installer and optional read-only source audits. |
@@ -118,4 +138,4 @@ The source audit also has a manual GitHub Actions workflow. It reports drift for
 
 GitHub and primary model/provider documents anchor the approved records. Hacker News, X/Twitter, Reddit and skill directories supplied discovery leads, with access gaps recorded in the [coverage report](research/coverage.md). Direct Reddit/X access was incomplete; secondary-only leads are labeled. This is broad curation, not a claim that every social post or every upstream runtime was inspected.
 
-All 193 selected upstream paths were verified against their recorded immutable commits. That is source integrity, not runtime or security certification. Model endpoints, upstream installations and rendered-video quality have not been benchmarked by this project. Third-party skill bodies and model weights are linked, not bundled. [Security](SECURITY.md) · [Attribution and licensing](NOTICE.md).
+The [pin-verification report](research/pin-verification.json) records checks against immutable commits. That is source integrity, not runtime or security certification. Model endpoints, upstream installations and rendered-video quality have not been benchmarked by this project. Third-party skill bodies and model weights are linked, not bundled. [Security](SECURITY.md) · [Attribution and licensing](NOTICE.md).

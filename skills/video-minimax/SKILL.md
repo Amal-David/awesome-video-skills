@@ -1,10 +1,10 @@
 ---
 name: video-minimax
-description: "Model-specific video workflow for H3 Max, H3 Max Turbo in the minimax family. Select exact modes, references, provider constraints and prompt structure before generation, editing or continuation."
+description: "Model-specific video workflow for H3, H3 Max, H3 Max Turbo in the minimax family. Select exact modes, references, provider constraints and prompt structure before generation, editing or continuation."
 compatibility: File-reading agents; actual generation requires the separately verified provider or renderer.
 metadata:
-  version: "1.0.0"
-  snapshot: "2026-10-01"
+  version: "1.1.0"
+  snapshot: "2026-10-12"
 ---
 
 # Minimax workflow

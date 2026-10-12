@@ -68,7 +68,20 @@
     "runtime_tested": false,
     "playbook": "models/minimax.md",
     "skill_id": "video-minimax",
-    "model_version": "H3 Max"
+    "model_version": "H3",
+    "field_reviews": [
+      {
+        "fields": [
+          "model_version"
+        ],
+        "checked_at": "2026-10-12",
+        "source_ids": [
+          "h3-launch",
+          "h3-card"
+        ],
+        "note": "Base H3 identity correction only; other capability evidence retains its original review date."
+      }
+    ]
   },
   {
     "id": "minimax-h3-local-fl",
@@ -122,9 +135,22 @@
     "runtime_tested": false,
     "playbook": "models/minimax.md",
     "skill_id": "video-minimax",
-    "model_version": "H3 Max",
+    "model_version": "H3",
     "artifact_ids": [
       "MiniMaxAI/MiniMax-H3:H3-Base-FL2VA"
+    ],
+    "field_reviews": [
+      {
+        "fields": [
+          "model_version"
+        ],
+        "checked_at": "2026-10-12",
+        "source_ids": [
+          "h3-launch",
+          "h3-card"
+        ],
+        "note": "Base H3 identity correction only; other capability evidence retains its original review date."
+      }
     ]
   },
   {
@@ -185,9 +211,22 @@
     "runtime_tested": false,
     "playbook": "models/minimax.md",
     "skill_id": "video-minimax",
-    "model_version": "H3 Max",
+    "model_version": "H3",
     "artifact_ids": [
       "MiniMaxAI/MiniMax-H3:H3-Base-Ref2VA"
+    ],
+    "field_reviews": [
+      {
+        "fields": [
+          "model_version"
+        ],
+        "checked_at": "2026-10-12",
+        "source_ids": [
+          "h3-launch",
+          "h3-card"
+        ],
+        "note": "Base H3 identity correction only; other capability evidence retains its original review date."
+      }
     ]
   },
   {

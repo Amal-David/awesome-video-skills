@@ -5,11 +5,14 @@
   "additionalProperties": false,
   "properties": {
     "agent": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "as_of": {
       "type": "string",
-      "format": "date"
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
     },
     "audio_only": {
       "type": "boolean"
@@ -32,10 +35,14 @@
       "exclusiveMinimum": 0
     },
     "engine": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "family": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "fps": {
       "type": "number",
@@ -50,7 +57,8 @@
     },
     "input_audio_seconds": {
       "type": "number",
-      "minimum": 0
+      "exclusiveMinimum": 0,
+      "description": "Positive source-audio duration for audio-driven generation. The router also checks the task inferred from query."
     },
     "limit": {
       "type": "integer",
@@ -62,10 +70,14 @@
       "type": "boolean"
     },
     "model": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "provider": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "query": {
       "type": "string"
@@ -79,7 +91,8 @@
     },
     "reference_audio_seconds": {
       "type": "number",
-      "minimum": 0
+      "minimum": 0,
+      "description": "A positive duration requires a positive reference_audio count."
     },
     "reference_images": {
       "type": "integer",
@@ -87,7 +100,8 @@
     },
     "reference_video_seconds": {
       "type": "number",
-      "minimum": 0
+      "minimum": 0,
+      "description": "A positive duration requires a positive reference_videos count."
     },
     "reference_videos": {
       "type": "integer",
@@ -142,7 +156,9 @@
       "uniqueItems": true
     },
     "resolution": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "runtime": {
       "enum": [
@@ -180,5 +196,130 @@
         "foley"
       ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "media_local_only": {
+            "const": true
+          }
+        },
+        "required": [
+          "media_local_only"
+        ]
+      },
+      "then": {
+        "not": {
+          "properties": {
+            "runtime": {
+              "const": "cloud"
+            }
+          },
+          "required": [
+            "runtime"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "audio_only": {
+            "const": true
+          }
+        },
+        "required": [
+          "audio_only"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reference_images": {
+            "maximum": 0
+          },
+          "reference_videos": {
+            "maximum": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "auto_duration": {
+            "const": true
+          }
+        },
+        "required": [
+          "auto_duration"
+        ]
+      },
+      "then": {
+        "not": {
+          "required": [
+            "duration"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "input_audio_seconds"
+        ]
+      },
+      "then": {
+        "properties": {
+          "task": {
+            "const": "audio-driven"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reference_video_seconds": {
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "reference_video_seconds"
+        ]
+      },
+      "then": {
+        "required": [
+          "reference_videos"
+        ],
+        "properties": {
+          "reference_videos": {
+            "minimum": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reference_audio_seconds": {
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "reference_audio_seconds"
+        ]
+      },
+      "then": {
+        "required": [
+          "reference_audio"
+        ],
+        "properties": {
+          "reference_audio": {
+            "minimum": 1
+          }
+        }
+      }
+    }
+  ]
 }

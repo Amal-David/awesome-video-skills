@@ -1,8 +1,9 @@
 {
-  "snapshot_date": "2026-10-01",
-  "scope": "Pinned skill paths and Git blob IDs against immutable commit trees. Not execution or script auditing.",
-  "skill_paths": 193,
-  "repository_snapshots": 41,
+  "snapshot_date": "2026-10-12",
+  "checked_at": "2026-10-12T10:04:13+00:00",
+  "scope": "Pinned skill paths and Git blob IDs against immutable commit trees via the GitHub connector. Not execution or script auditing.",
+  "skill_paths": 206,
+  "repository_snapshots": 47,
   "results": [
     {
       "repository": "artokun/comfyui-mcp",
@@ -40,6 +41,13 @@
       "mismatches": []
     },
     {
+      "repository": "charlie947/motion-graphics-skills",
+      "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
+      "paths_checked": 13,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
       "repository": "ChatCut-Inc/agent-plugin",
       "revision": "877b9177144feeecdef0da70f0e4d5cb760f6037",
       "paths_checked": 8,
@@ -61,9 +69,30 @@
       "mismatches": []
     },
     {
+      "repository": "heygen-com/hyperframes-community-skills",
+      "revision": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
+      "paths_checked": 3,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
       "repository": "heygen-com/hyperframes",
-      "revision": "be80a308023b224b27a6c8739315d1b6598f149c",
+      "revision": "86521b94f592bcf0ca86aba63068893cf658af16",
       "paths_checked": 21,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "heygen-com/skills",
+      "revision": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "paths_checked": 3,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "iart-ai/web-animation-skills",
+      "revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
+      "paths_checked": 5,
       "status": "verified",
       "mismatches": []
     },
@@ -75,6 +104,13 @@
       "mismatches": []
     },
     {
+      "repository": "iart-ai/motion-design-skills",
+      "revision": "3c129f769d90a1328c209c386492333c9ac62312",
+      "paths_checked": 9,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
       "repository": "iart-ai/data-animation-skills",
       "revision": "8ce2709c3992490251e8a991535b1945f01c6865",
       "paths_checked": 3,
@@ -82,16 +118,9 @@
       "mismatches": []
     },
     {
-      "repository": "iart-ai/ecommerce-video-skills",
-      "revision": "2bd0dd19c9b2df5230f5d8f7453861b9681e49b4",
-      "paths_checked": 3,
-      "status": "verified",
-      "mismatches": []
-    },
-    {
-      "repository": "iart-ai/explainer-video-skills",
-      "revision": "3e2d411b725d9a72939cf8e5eb81579e751373e7",
-      "paths_checked": 5,
+      "repository": "iart-ai/youtube-video-skills",
+      "revision": "f3df381d65abe5078f5ed410bbc3ed72e7cb92bd",
+      "paths_checked": 2,
       "status": "verified",
       "mismatches": []
     },
@@ -99,6 +128,20 @@
       "repository": "iart-ai/freelance-motion-skills",
       "revision": "d85c2b484693d0387333c778d9c95230fa1856ce",
       "paths_checked": 4,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "iart-ai/tiktok-video-skills",
+      "revision": "2a775336b5a638cbf8a61dbd785f9a1b649be016",
+      "paths_checked": 4,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "iart-ai/explainer-video-skills",
+      "revision": "3e2d411b725d9a72939cf8e5eb81579e751373e7",
+      "paths_checked": 5,
       "status": "verified",
       "mismatches": []
     },
@@ -145,34 +188,6 @@
       "mismatches": []
     },
     {
-      "repository": "iart-ai/motion-design-skills",
-      "revision": "3c129f769d90a1328c209c386492333c9ac62312",
-      "paths_checked": 9,
-      "status": "verified",
-      "mismatches": []
-    },
-    {
-      "repository": "iart-ai/text-message-video-skills",
-      "revision": "3a800e1e9b9635fa196a07b0143c80f7e9648558",
-      "paths_checked": 1,
-      "status": "verified",
-      "mismatches": []
-    },
-    {
-      "repository": "iart-ai/tiktok-video-skills",
-      "revision": "2a775336b5a638cbf8a61dbd785f9a1b649be016",
-      "paths_checked": 4,
-      "status": "verified",
-      "mismatches": []
-    },
-    {
-      "repository": "iart-ai/web-animation-skills",
-      "revision": "b6dba3eb759726845a44163ff0bad70dd9e7fbb6",
-      "paths_checked": 5,
-      "status": "verified",
-      "mismatches": []
-    },
-    {
       "repository": "iart-ai/webgl-animation-skills",
       "revision": "50697d659fbf70152f48f9f8aadf1efe78bbdde1",
       "paths_checked": 3,
@@ -180,9 +195,16 @@
       "mismatches": []
     },
     {
-      "repository": "iart-ai/youtube-video-skills",
-      "revision": "f3df381d65abe5078f5ed410bbc3ed72e7cb92bd",
-      "paths_checked": 2,
+      "repository": "iart-ai/ecommerce-video-skills",
+      "revision": "2bd0dd19c9b2df5230f5d8f7453861b9681e49b4",
+      "paths_checked": 3,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "iart-ai/text-message-video-skills",
+      "revision": "3a800e1e9b9635fa196a07b0143c80f7e9648558",
+      "paths_checked": 1,
       "status": "verified",
       "mismatches": []
     },
@@ -204,6 +226,13 @@
       "repository": "Jellypod-Inc/cartoon-studio",
       "revision": "e773568f7b6e6efe8cdf4d068efddfb5e65c4169",
       "paths_checked": 1,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "JianhuiWei7/VideoWeaver",
+      "revision": "cf9990f49a9203c01f2f2a75649e4c92d643e183",
+      "paths_checked": 4,
       "status": "verified",
       "mismatches": []
     },
@@ -236,9 +265,23 @@
       "mismatches": []
     },
     {
+      "repository": "nopefallacy/vertical-video-editing-skills",
+      "revision": "8de3a875a7856dba658027a8f64a6bdfe9800b9e",
+      "paths_checked": 1,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
       "repository": "remotion-dev/skills",
-      "revision": "a9b199e165505267eda1ed3e0ef3dd3567c43411",
+      "revision": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
       "paths_checked": 12,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "rendleyhq/video-editing-skill",
+      "revision": "837982ef6ddc324b0a390112f10b86a140074cda",
+      "paths_checked": 1,
       "status": "verified",
       "mismatches": []
     },
@@ -246,6 +289,13 @@
       "repository": "replicate/skills",
       "revision": "2f36e415965ae63baa1c9f6635888092bcd771d3",
       "paths_checked": 4,
+      "status": "verified",
+      "mismatches": []
+    },
+    {
+      "repository": "runwayml/skills",
+      "revision": "e3dffc15498e9588e7815f37b9ecf10e8bc2c902",
+      "paths_checked": 1,
       "status": "verified",
       "mismatches": []
     },
@@ -281,13 +331,6 @@
       "repository": "Varnan-Tech/opendirectory",
       "revision": "62e437ab13408171805a87d16f5cb0151f96ea3c",
       "paths_checked": 3,
-      "status": "verified",
-      "mismatches": []
-    },
-    {
-      "repository": "charlie947/motion-graphics-skills",
-      "revision": "4cd156acdad0483884867c2d5a22268db66099d1",
-      "paths_checked": 13,
       "status": "verified",
       "mismatches": []
     }

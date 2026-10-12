@@ -1,10 +1,10 @@
 ---
 name: video-router
-description: Find a model-specific video or motion skill and produce a decision workflow. Use for Claude Code, Opus 5.5, GPT-6 Astra, Remotion, Hyperframes, LTX, MiniMax H3/H3 Max, Seedance 2.5, Wan, FLUX.3, Gemini Omni, HappyHorse or Kling. Separates code motion from generated footage, checks capabilities and prefers recent verified releases.
+description: Find a model-specific video or motion skill and produce a decision workflow. Use for Claude Code, Opus 5.5, GPT-6 Astra, Remotion, Hyperframes, LTX, MiniMax H3/H3 Max, Seedance 2.5, Wan, FLUX.3, Gemini Omni, HappyHorse, Kling or Runway. Separates code motion from generated footage, checks capabilities and prefers recent verified releases.
 compatibility: Any file-reading agent; Python 3.10+ for the optional offline router.
 metadata:
-  version: "1.0.0"
-  snapshot: "2026-10-01"
+  version: "1.1.0"
+  snapshot: "2026-10-12"
 ---
 
 # Video workflow router
@@ -21,3 +21,5 @@ Start here, not by loading the entire catalog. This skill selects and explains; 
 Read [retrieval design](references/retrieval.md) for JSONL/RAG ingestion and [quality review](references/quality.md) before delivery. The bundled registry is an offline snapshot, not live availability or pricing.
 
 Machine consumers can read the [request schema](references/schemas/request.schema.json) and [result schema](references/schemas/result.schema.json).
+
+For concrete task stacks read [workflow recipes](references/workflow-recipes.md). To compare workflows or revise a skill from observed failures, read [evaluation](references/evaluation.md).

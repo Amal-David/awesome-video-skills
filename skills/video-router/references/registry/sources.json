@@ -358,5 +358,77 @@
     "published": null,
     "checked_at": "2026-10-01",
     "note": "Primary documentation retrieved as search-visible text; full-page fetch was not consistently available."
+  },
+  {
+    "id": "runway-models",
+    "title": "Runway Dev model catalog",
+    "url": "https://docs.dev.runwayml.com/guides/models/",
+    "kind": "provider-documentation",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Current provider catalog; capabilities remain scoped to exact model and operation."
+  },
+  {
+    "id": "runway-changelog",
+    "title": "Runway Dev availability and deprecation ledger",
+    "url": "https://docs.dev.runwayml.com/api-details/api_changelog/",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Gen-4.5 API availability 2026-02-10; Aleph 2.0 API availability 2026-06-02; gen4_aleph and gen3a_turbo removed 2026-07-30. These are provider events."
+  },
+  {
+    "id": "runway-gen45-launch",
+    "title": "Runway Gen-4.5 model announcement",
+    "url": "https://runway.com/research/introducing-runway-gen-4.5",
+    "kind": "official-documentation",
+    "published": "2025-12-01",
+    "checked_at": "2026-10-12",
+    "note": "Model release date is separate from API availability. Historical benchmark marketing is not a current quality ranking."
+  },
+  {
+    "id": "runway-gen45-t2v-sdk",
+    "title": "Pinned Runway SDK: Gen-4.5 text-to-video contract",
+    "url": "https://github.com/runwayml/sdk-python/blob/91703c372f3041f4ca0426417628d91a62e78e70/src/runwayml/types/text_to_video_create_params.py",
+    "kind": "provider-schema",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Official OpenAPI-generated SDK inspected at immutable commit. Gen4_5: integer duration 2–10; ratio 1280:720 or 720:1280; prompt max 1000 UTF-16 code units. Static review only."
+  },
+  {
+    "id": "runway-gen45-i2v-sdk",
+    "title": "Pinned Runway SDK: Gen-4.5 image-to-video contract",
+    "url": "https://github.com/runwayml/sdk-python/blob/91703c372f3041f4ca0426417628d91a62e78e70/src/runwayml/types/image_to_video_create_params.py",
+    "kind": "provider-schema",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Official OpenAPI-generated SDK inspected at immutable commit. Gen4_5 exposes first-frame input only and six output dimensions. No native-audio parameter or guarantee is inferred."
+  },
+  {
+    "id": "runway-aleph2-sdk",
+    "title": "Pinned Runway SDK: Aleph 2.0 edit contract",
+    "url": "https://github.com/runwayml/sdk-python/blob/91703c372f3041f4ca0426417628d91a62e78e70/src/runwayml/types/video_to_video_create_params.py",
+    "kind": "provider-schema",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Variant0 model aleph2: source video, up to five timed keyframes, optional edit windows and targetAspectRatio outpainting. ProRes alpha is opaque. Source duration from provider changelog."
+  },
+  {
+    "id": "runway-professional-outputs",
+    "title": "Runway professional and HDR output contract",
+    "url": "https://docs.dev.runwayml.com/guides/professional-outputs/",
+    "kind": "provider-documentation",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Gen-4.5 HDR output and Aleph SDR editing are distinct; Aleph requires a separate Ruby operation for HDR delivery. Output formats can incur additional cost."
+  },
+  {
+    "id": "runway-gen45-guide",
+    "title": "Gen-4.5 creator guide and nominal output tier",
+    "url": "https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5",
+    "kind": "official-documentation",
+    "published": null,
+    "checked_at": "2026-10-12",
+    "note": "Confirms 720p nominal output tier; this guide describes the web UI. API dimensions come from the pinned SDK, and web-only FPS settings are not imported."
   }
 ]

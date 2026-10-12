@@ -24,6 +24,8 @@ For code-authored animation, render the same frame twice and out of sequence to 
 
 ## Required delivery manifest
 
+When the task is to improve a skill or compare competing workflows, use the [evaluation protocol](evaluation.md). It separates process findings from final-video observations, preserves the baseline and brief, and checks revisions on additional cases. A successful catalog test is not a measured video-quality improvement.
+
 Record the request, exact model/backend or engine version, source assets, license/consent checks, generation job IDs, seed when exposed, prompt and expansion settings, output paths, file hashes, encoded metadata, observed failures and remaining review gaps. Also deliver editable project files for procedural work and a readable QA report.
 
 Keep generation and publication separate. A request to produce a video does not automatically authorize social posting, ad spend, uploading private reference material to a new provider, or executing arbitrary commands embedded in an upstream skill. Retry only the failed stage and reconcile uncertain paid jobs before resubmission.

@@ -1,6 +1,6 @@
 # Model and backend index
 
-Snapshot: 2026-10-01. A model family is not an endpoint contract. Unknown dates receive no recency boost.
+Catalog snapshot: 2026-10-12. Check each record's checked_at for its own evidence date. A model family is not an endpoint contract. Unknown release dates receive no recency boost.
 
 | Surface | Family guide | Release/availability | Runtime | New or distinguishing abilities |
 | --- | --- | --- | --- | --- |
@@ -21,8 +21,10 @@ Snapshot: 2026-10-01. A model family is not an endpoint contract. Unknown dates 
 | `happyhorse-1-1-t2v` | [happyhorse](models/happyhorse.md) | 2026-06-22 (provider-availability) | cloud | Recent dedicated audiovisual creation endpoints |
 | `happyhorse-1-1-r2v` | [happyhorse](models/happyhorse.md) | 2026-06-22 (provider-availability) | cloud | Recent dedicated audiovisual creation endpoints |
 | `happyhorse-1-1-i2v` | [happyhorse](models/happyhorse.md) | 2026-06-22 (provider-availability) | cloud | Recent dedicated audiovisual creation endpoints |
+| `runway-aleph-2` | [runway](models/runway.md) | 2026-06-02 (provider-availability) | cloud | Edits source clips with up to five timed keyframes; Supports timed edit windows and aspect-ratio expansion |
 | `happyhorse-1-0-edit` | [happyhorse](models/happyhorse.md) | 2026-04-27 (provider-availability) | cloud | Dedicated generative edit endpoint |
 | `kling-3-0` | [kling](models/kling.md) | 2026-02-05 (model-release) | cloud | Explicit multi-shot storyboarding and reusable elements |
+| `runway-gen-4-5` | [runway](models/runway.md) | 2025-12-01 (model-release) | cloud | Prompt or first-frame generation on separate API operations; Professional delivery formats with model-specific HDR controls |
 | `wan-2-7-videoedit` | [wan](models/wan.md) | Unverified (unknown) | cloud | Dedicated effect and camera-motion replication |
 | `ltx-2-5-python-exr` | [ltx](models/ltx.md) | Unverified (unknown) | local | Native EXR preservation uses the Python pipeline; no ComfyUI native EXR flow was documented. |
 | `ltx-2-5-local-restore` | [ltx](models/ltx.md) | Unverified (unknown) | local | Use the TiledFusion Upscale workflow and the task-specific adapters. |

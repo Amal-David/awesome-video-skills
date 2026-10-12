@@ -1,18 +1,19 @@
 {
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-10-01",
+  "snapshot_date": "2026-10-12",
   "preferred_release_window": {
-    "start": "2026-04-01",
-    "end": "2026-10-01"
+    "start": "2026-04-12",
+    "end": "2026-10-12"
   },
   "counts": {
-    "model_surfaces": 29,
+    "model_surfaces": 31,
     "engines": 6,
     "controllers": 2,
-    "upstream_skill_paths": 193,
-    "skill_repositories": 41,
+    "upstream_skill_paths": 206,
+    "skill_repositories": 47,
     "workflows": 24,
-    "native_skills": 11
+    "native_skills": 12
   },
-  "assurance": "Source-backed curation and offline routing; no upstream runtime certification."
+  "assurance": "Source-backed curation and offline routing; no upstream runtime certification.",
+  "project_version": "1.1.0"
 }

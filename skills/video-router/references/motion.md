@@ -28,3 +28,17 @@ For Opus 5.5, the upstream `brag` workflow can hand off to `brag-slim`; full or 
 Search by craft (`kinetic typography`, `chart animation`, `audiogram`, `shader`, `lower thirds`, `manim`) after choosing a renderer. Install only the needed upstream pack. iart’s umbrella repository is a directory of packs, not itself a single executable skill. ChatCut motion-graphic JSX skills require ChatCut’s editor tools and are not automatically portable React compositions.
 
 Sources: the pinned [skill catalog](catalog.md) links the reviewed upstream paths; [controller profiles](agents.md) document host/controller separation. Rendering quality and all upstream installations remain unbenchmarked by this repository.
+
+## Editing an existing recording
+
+Decide whether the request changes the spoken content, decorates the picture or replaces the language. Captioning, graphic overlays, transcript cutting and dubbing are distinct workflows.
+
+The current [HyperFrames talking-head-recut](https://github.com/heygen-com/hyperframes/blob/86521b94f592bcf0ca86aba63068893cf658af16/skills/talking-head-recut/SKILL.md) retains the entire recording and adds timed graphic cards. Use an actual timeline or transcript-editing workflow to remove pauses or rearrange speech. Captions for a shortened recording must use the edited timeline.
+
+## Renderer details that affect the delivered result
+
+For HyperFrames audio, clip envelopes use clip-local time and group envelopes use composition time. The root composition can apply effects to the master mix, but master automation is not supported. `hyperframes-audio` handles placed-track mixing; `media-use` handles sourcing or generating media. See the pinned [audio reference](https://github.com/heygen-com/hyperframes/blob/86521b94f592bcf0ca86aba63068893cf658af16/docs/reference/audio-effects.mdx). Inspect encoded output around trimmed-scene boundaries and audio tails, where preview and export must agree.
+
+Remotion's [interactivity guidance](https://github.com/remotion-dev/skills/blob/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-interactivity/SKILL.md) ties independent Studio edits to separate authored JSX nodes. Use a loop when instances should share a template; give clips their own nodes when they need independent editing. Its [render guide](https://github.com/remotion-dev/skills/blob/7ba4dcf8ebe1626b00baa41e1f2478113719b60b/skills/remotion-render/SKILL.md) covers selected-frame and alpha-capable exports. Choose an appropriate format when transparency is required.
+
+Pin the skill revision, renderer version and asset dependencies separately. Current HyperFrames [CLI guidance](https://github.com/heygen-com/hyperframes/blob/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-cli/SKILL.md) requires Node 22+ and FFmpeg. A community recipe tied to an older renderer must keep that compatibility decision explicit; updating instructions does not reproduce a known runtime.

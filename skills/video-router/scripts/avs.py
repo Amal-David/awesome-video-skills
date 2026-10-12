@@ -9,6 +9,7 @@ import json
 import math
 import re
 import sys
+from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
@@ -44,6 +45,12 @@ def infer_task(query: str) -> tuple[str | None, list[str]]:
     q = query.lower()
     rules = [
         (['motion transfer', 'transfer motion'], 'reference', ['motion-transfer']),
+        (['inpaint'], 'inpaint', []), (['outpaint'], 'outpaint', []),
+        (['video restoration', 'restore video', 'restore this video'], 'restore', []),
+        (['exr', 'hdr roundtrip', 'hdr round-trip'], 'exr-hdr', []),
+        (['dubbing', 'dub video', 'dub this video', 'replace dialogue'], 'dub', []),
+        (['foley', 'video to audio', 'video-to-audio'], 'foley', []),
+        (['draft enhance', 'draft-enhance'], 'draft-enhance', []),
         (['retake'], 'retake', []), (['extend', 'continuation'], 'extend', []),
         (['first and last', 'first/last', 'first-last', 'two keyframes'], 'transition', []),
         (['audio driven', 'audio-driven', 'lip sync', 'lip-sync'], 'audio-driven', []),
@@ -76,6 +83,8 @@ def validate_request(request: dict, catalog: dict) -> dict:
     for field in fields:
         if field in r and not isinstance(r[field], str):
             raise ValueError(field + ' must be a string.')
+        if field in r and field != 'query' and not r[field].strip():
+            raise ValueError(field + ' must not be blank.')
     for field in ('require', 'available_tools'):
         if field in r and (not isinstance(r[field], list) or any(not isinstance(x, str) for x in r[field])):
             raise ValueError(field + ' must be an array of strings.')
@@ -87,12 +96,16 @@ def validate_request(request: dict, catalog: dict) -> dict:
         if field not in r:
             continue
         value = r[field]
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or (isinstance(value, float) and not math.isfinite(value)) or value < 0:
             raise ValueError(field + ' must be a finite nonnegative number.')
-        if field in ('duration', 'fps') and value == 0:
+        if field in ('duration', 'fps', 'input_audio_seconds') and value == 0:
             raise ValueError(field + ' must be positive.')
-        if field.startswith('reference_') and not field.endswith('_seconds') and int(value) != value:
-            raise ValueError(field + ' must be an integer count.')
+        if field.startswith('reference_') and not field.endswith('_seconds'):
+            if int(value) != value:
+                raise ValueError(field + ' must be an integer count.')
+            # JSON Schema permits integral decimals such as 1.0. Normalize them
+            # before summing counts so a float never coerces a large integer.
+            r[field] = int(value)
     if r.get('runtime', 'either') not in ('either', 'local', 'cloud'):
         raise ValueError('runtime must be either, local or cloud.')
     if r.get('host', 'generic') not in ('generic', 'claude-code', 'codex'):
@@ -116,7 +129,12 @@ def validate_request(request: dict, catalog: dict) -> dict:
         raise ValueError('audio_only conflicts with visual references.')
     if r.get('auto_duration') and 'duration' in r:
         raise ValueError('auto_duration and a fixed duration are mutually exclusive.')
-    if 'input_audio_seconds' in r and r.get('task') not in (None, 'audio-driven'):
+    for kind, count in (('video', 'reference_videos'), ('audio', 'reference_audio')):
+        field = 'reference_' + kind + '_seconds'
+        if r.get(field, 0) > 0 and not r.get(count, 0):
+            raise ValueError(field + ' requires a positive ' + count + ' count.')
+    resolved_task = r.get('task') or infer_task(r.get('query', ''))[0]
+    if 'input_audio_seconds' in r and resolved_task not in (None, 'audio-driven'):
         raise ValueError('input_audio_seconds is for the audio-driven task.')
     return r
 
@@ -128,11 +146,13 @@ def limit_errors(model: dict, request: dict) -> list[str]:
     errors, limits = [], effective_limits(model, request)
     duration, fps, resolution = (request.get(k) for k in ('duration', 'fps', 'resolution'))
     if limits.get('duration_follows_input_audio'):
-        if duration is not None and request.get('input_audio_seconds') is not None and abs(duration - request['input_audio_seconds']) > 0.001:
+        if duration is not None and request.get('input_audio_seconds') is not None and abs(Fraction(duration) - Fraction(request['input_audio_seconds'])) > Fraction(1, 1000):
             errors.append('This operation follows input-audio duration, which differs from the requested duration.')
         duration = None
     if request.get('auto_duration') and request.get('task') in limits.get('auto_duration_forbidden_tasks', []):
         errors.append('Automatic duration cannot be combined with this anchored operation.')
+    if duration is not None and 'allowed_seconds' in limits and duration not in limits['allowed_seconds']:
+        errors.append('Duration is not one of this operation’s documented allowed seconds.')
     profiles = limits.get('profiles', [])
     if profiles and any(v is not None for v in (duration, fps, resolution)):
         valid = any((duration is None or duration in p['seconds']) and
@@ -184,6 +204,9 @@ def route(request: dict, catalog: dict | None = None) -> dict:
     required = set(workflow['requires']) | set(r.get('require', []))
     if not r.get('task'):
         required.update(inferred_caps)
+        if inferred_caps:
+            # The saved, explicit task must preserve constraints inferred from the query.
+            r['require'] = sorted(set(r.get('require', [])) | set(inferred_caps))
         result['warnings'].append('Task inferred by lexical rules; review the structured request before execution.')
     r['task'] = task
     if r.get('auto_duration'):
@@ -192,15 +215,21 @@ def route(request: dict, catalog: dict | None = None) -> dict:
     if task == 'hybrid':
         finishing_required.update(required & {'exact-text', 'editable-code', 'subtitle-timing', 'batch-variants', 'alpha-output'})
         required.difference_update(finishing_required)
+    creation = task in {'generate', 'animate-image', 'reference', 'transition',
+                        'audio-driven', 'multishot', 'hybrid', 'document-to-video', 'draft-enhance'}
     if r.get('audio_only'):
         required.add('audio-only-reference')
-    if r.get('reference_audio', 0) and not (r.get('reference_images', 0) or r.get('reference_videos', 0)):
+    if creation and r.get('reference_audio', 0) and not (r.get('reference_images', 0) or r.get('reference_videos', 0)):
         required.add('audio-only-reference')
     if 'resolution' in r:
         r['resolution'] = {'4k': '2160p', '2k': '1440p'}.get(r['resolution'].lower(), r['resolution'].lower())
     for media, capability in [('images', 'image-reference'), ('videos', 'video-reference'), ('audio', 'audio-reference')]:
         if r.get('reference_' + media, 0):
-            required.update(['reference-to-video', capability])
+            required.add(capability)
+            # An edit can take guidance images/audio without being a reference-to-video
+            # generation endpoint. Keep the operation and modality requirements separate.
+            if creation:
+                required.add('reference-to-video')
     result.update(task=task, required_capabilities=sorted(required), workflow=workflow)
     agent = next((a for a in c['agents'] if r.get('agent') and matches(a, r['agent'])), None)
     if r.get('agent') and not agent:
@@ -267,10 +296,13 @@ def route(request: dict, catalog: dict | None = None) -> dict:
             score += 30
         skills = select_skills(item, r, c)
         pending = ['Current schema, account access, price, media rights and runtime prerequisites.']
+        if set(workflow.get('inputs', [])) & {'source-video', 'source-video-or-job', 'authorized-source-media'}:
+            pending.append('Supply and validate the required source media or supported prior job; reference counts do not establish source-media presence.')
         if not procedural:
             limits = effective_limits(item, r)
             for field, evidence in [('duration', 'max_seconds'), ('fps', 'fps'), ('resolution', 'resolutions')]:
-                if r.get(field) is not None and evidence not in limits and not limits.get('profiles'):
+                verified = evidence in limits or bool(limits.get('profiles')) or (field == 'duration' and 'allowed_seconds' in limits)
+                if r.get(field) is not None and not verified:
                     pending.append(field + ' is not verified in this snapshot.')
             if any(r.get('reference_' + t, 0) for t in ('images', 'videos', 'audio')):
                 pending.append('Validate every supplied reference type and count in the live operation schema.')
@@ -288,7 +320,13 @@ def route(request: dict, catalog: dict | None = None) -> dict:
     result['next_action'] = 'Read the first candidate guide, resolve the live schema, then complete preflight.' if result['candidates'] else 'Inspect exclusions. Change a constraint only with user approval or add verified evidence.'
     result['warnings'].append('Scores are transparent routing preferences, not measured model quality.')
     if task == 'hybrid' and result['candidates']:
-        result['finishing_stage'] = route({'task': 'motion', 'require': sorted(finishing_required), 'as_of': r['as_of'], 'limit': 2}, c)
+        # Privacy, execution environment and controller apply to every stage. Model,
+        # provider and source-reference constraints belong only to footage generation.
+        finishing_request = {key: copy.deepcopy(r[key]) for key in
+                             ('as_of', 'agent', 'host', 'runtime', 'media_local_only',
+                              'available_tools', 'fps', 'resolution') if key in r}
+        finishing_request.update(task='motion', require=sorted(finishing_required), limit=2)
+        result['finishing_stage'] = route(finishing_request, c)
     if task == 'hybrid' and result.get('finishing_stage', {}).get('status') == 'no_compatible_route':
         result['status'] = 'no_compatible_route'
         result['next_action'] = 'The footage stage has candidates, but the finishing constraints have no compatible route.'

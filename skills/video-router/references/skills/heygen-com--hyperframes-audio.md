@@ -1,20 +1,23 @@
 # hyperframes-audio
 
-Hyperframes workflow for audio using its HTML/video toolchain.
+Maintainer guidance for mixing placed audio: gain, fades, ducking, effect chains, clip and group automation, and a composition-wide master bus.
 
 **ID:** `heygen-com--hyperframes-audio` · **Tier:** supporting
-**Evidence:** path-and-metadata-inspected · **Runtime tested:** no · **Checked:** 2026-10-01
+**Evidence:** path-and-metadata-inspected · **Runtime tested:** no · **Checked:** 2026-10-12
 **Portability:** agent-portable · **Provider scope:** any
-**Prerequisites:** node, hyperframes
+**Prerequisites:** node-22-plus, hyperframes, ffmpeg
 **Model binding:** not-model-specific
 
-[Pinned upstream SKILL.md](https://github.com/heygen-com/hyperframes/blob/be80a308023b224b27a6c8739315d1b6598f149c/skills/hyperframes-audio/SKILL.md)
-Repository revision: `be80a308023b224b27a6c8739315d1b6598f149c`
-File SHA-256: `70fedc7b32e6fe1dd1076c932d8853775271d9a29d03b97340c695a4d391c397`
+[Pinned upstream SKILL.md](https://github.com/heygen-com/hyperframes/blob/86521b94f592bcf0ca86aba63068893cf658af16/skills/hyperframes-audio/SKILL.md)
+Repository revision: `86521b94f592bcf0ca86aba63068893cf658af16`
+File SHA-256: `daf3250390426ef096a7d2f71082919418099decbd1f31288640a43b43c7e293`
 Repository license: Apache-2.0; skill-declared license: not found.
 
 ## Before use
 
-- Static inspection only; no dependency installation, generation or paid endpoint execution performed.
+- Static source inspection only; dependencies, rendering, listening and paid endpoints were not executed.
+- The standalone updater follows upstream main; versioned plugin installs should update through their plugin manager. Pin the renderer separately from this skill revision.
+- Clip automation is clip-local; group automation uses composition time. Only the top-level root has a master bus, and root automation is not supported.
+- Mix quality needs listening and encoded output checks: preview may play dry for an invalid chain while export fails, and effect parameters have different automation support.
 
 Read the whole upstream skill directory and its dependencies. Audit instructions/scripts and licensing before installation. The pinned link is evidence, not an instruction to execute it automatically.

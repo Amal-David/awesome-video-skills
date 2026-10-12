@@ -130,7 +130,20 @@
     "runtime_tested": false,
     "playbook": "models/minimax.md",
     "skill_id": "video-minimax",
-    "model_version": "H3 Max"
+    "model_version": "H3",
+    "field_reviews": [
+      {
+        "fields": [
+          "model_version"
+        ],
+        "checked_at": "2026-10-12",
+        "source_ids": [
+          "h3-launch",
+          "h3-card"
+        ],
+        "note": "Base H3 identity correction only; other capability evidence retains its original review date."
+      }
+    ]
   },
   {
     "id": "minimax-h3-local-fl",
@@ -184,9 +197,22 @@
     "runtime_tested": false,
     "playbook": "models/minimax.md",
     "skill_id": "video-minimax",
-    "model_version": "H3 Max",
+    "model_version": "H3",
     "artifact_ids": [
       "MiniMaxAI/MiniMax-H3:H3-Base-FL2VA"
+    ],
+    "field_reviews": [
+      {
+        "fields": [
+          "model_version"
+        ],
+        "checked_at": "2026-10-12",
+        "source_ids": [
+          "h3-launch",
+          "h3-card"
+        ],
+        "note": "Base H3 identity correction only; other capability evidence retains its original review date."
+      }
     ]
   },
   {
@@ -247,9 +273,22 @@
     "runtime_tested": false,
     "playbook": "models/minimax.md",
     "skill_id": "video-minimax",
-    "model_version": "H3 Max",
+    "model_version": "H3",
     "artifact_ids": [
       "MiniMaxAI/MiniMax-H3:H3-Base-Ref2VA"
+    ],
+    "field_reviews": [
+      {
+        "fields": [
+          "model_version"
+        ],
+        "checked_at": "2026-10-12",
+        "source_ids": [
+          "h3-launch",
+          "h3-card"
+        ],
+        "note": "Base H3 identity correction only; other capability evidence retains its original review date."
+      }
     ]
   },
   {
@@ -1669,6 +1708,140 @@
       "ltx-comfy-nodes",
       "video-helper-suite",
       "foley-adapter"
+    ]
+  },
+  {
+    "id": "runway-gen-4-5",
+    "name": "Gen-4.5 / Runway Dev",
+    "family": "runway",
+    "provider": "runway",
+    "variant": "creation",
+    "release_date": "2025-12-01",
+    "release_date_kind": "model-release",
+    "checked_at": "2026-10-12",
+    "runtime": "cloud",
+    "capabilities": [
+      "text-to-video",
+      "image-to-video"
+    ],
+    "unsupported_capabilities": [
+      "first-last-frame",
+      "video-editing"
+    ],
+    "api_model_ids": [
+      "gen4.5"
+    ],
+    "source_ids": [
+      "runway-models",
+      "runway-gen45-launch",
+      "runway-changelog",
+      "runway-gen45-t2v-sdk",
+      "runway-gen45-i2v-sdk",
+      "runway-professional-outputs",
+      "runway-gen45-guide"
+    ],
+    "novel_abilities": [
+      "Prompt or first-frame generation on separate API operations",
+      "Professional delivery formats with model-specific HDR controls"
+    ],
+    "limits": {
+      "min_seconds": 2,
+      "max_seconds": 10,
+      "resolutions": [
+        "720p"
+      ],
+      "allowed_seconds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "aliases": [
+      "gen4.5",
+      "gen-4.5",
+      "gen-4-5",
+      "runway-gen4.5"
+    ],
+    "notes": [
+      "Model launch was 2025-12-01; Runway API availability was 2026-02-10, not a new model release.",
+      "Durations are whole seconds. Text mode supports 1280:720 and 720:1280; image mode adds 1104:832, 960:960, 832:1104 and 1584:672. Validate dimensions on the actual operation; the router represents only the nominal 720p tier.",
+      "The inspected image contract accepts position=first only. Do not infer first/last control from unrelated Runway-hosted models.",
+      "Native generated audio and selectable API frame rate remain unverified. The web UI's 24/25fps control is not imported into this API record.",
+      "HDR output and EXR export do not establish exr-hdr-roundtrip support. Check provider access and any format surcharge."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/runway.md",
+    "skill_id": "video-runway",
+    "model_version": "Gen-4.5",
+    "skill_ids": [
+      "runwayml--use-runway-api"
+    ]
+  },
+  {
+    "id": "runway-aleph-2",
+    "name": "Aleph 2.0 / Runway Dev",
+    "family": "runway",
+    "provider": "runway",
+    "variant": "video-editing",
+    "release_date": "2026-06-02",
+    "release_date_kind": "provider-availability",
+    "checked_at": "2026-10-12",
+    "runtime": "cloud",
+    "capabilities": [
+      "video-editing",
+      "outpainting",
+      "image-reference"
+    ],
+    "unsupported_capabilities": [
+      "text-to-video",
+      "alpha-output"
+    ],
+    "api_model_ids": [
+      "aleph2"
+    ],
+    "source_ids": [
+      "runway-models",
+      "runway-changelog",
+      "runway-aleph2-sdk",
+      "runway-professional-outputs"
+    ],
+    "novel_abilities": [
+      "Edits source clips with up to five timed keyframes",
+      "Supports timed edit windows and aspect-ratio expansion"
+    ],
+    "limits": {
+      "min_seconds": 2,
+      "max_seconds": 30,
+      "max_reference_images": 5
+    },
+    "aliases": [
+      "aleph2",
+      "aleph-2",
+      "aleph-2-0",
+      "runway-aleph2"
+    ],
+    "notes": [
+      "This records Runway API availability, not a claimed underlying model launch date.",
+      "Requires one source video of 2–30 seconds. Router duration must be interpreted as the source/edit length at preflight; no separate output-duration parameter is established.",
+      "reference_images counts optional timed guidance keyframes on this record, not loose reference images; the timestamps and all-or-none edit-window rule require provider-schema validation.",
+      "targetAspectRatio performs source-canvas expansion. Do not infer temporal extension, prompt-only creation or free-form mask support.",
+      "Native HDR is not an Aleph output option in the inspected contract: use a separate Ruby conversion. ProRes 4444 alpha is fully opaque.",
+      "gen4_aleph was removed on 2026-07-30. Use aleph2; API resolution and frame-rate limits remain unrecorded rather than inheriting web-UI input limits."
+    ],
+    "evidence": "primary-source-documented",
+    "runtime_tested": false,
+    "playbook": "models/runway.md",
+    "skill_id": "video-runway",
+    "model_version": "Aleph 2.0",
+    "skill_ids": [
+      "runwayml--use-runway-api"
     ]
   }
 ]

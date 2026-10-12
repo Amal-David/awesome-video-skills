@@ -25,9 +25,10 @@
     "summary": "React compositions for frame-addressable video and reusable variants.",
     "notes": [
       "Existing React components favor this route.",
-      "Review the current framework license and render deployment separately from the skill license."
+      "Review the current framework license and render deployment separately from the skill license.",
+      "Independent Studio edits require separate authored JSX nodes; a loop intentionally shares source structure. Use the current maintainer interactivity and render skills for deliverable decisions."
     ],
-    "checked_at": "2026-10-01",
+    "checked_at": "2026-10-12",
     "release_date": null,
     "runtime_tested": false,
     "playbook": "motion.md"
@@ -57,8 +58,11 @@
       "heygen-com--hyperframes-animation"
     ],
     "summary": "HTML and timeline-based motion with an agent-oriented render workflow.",
-    "notes": [],
-    "checked_at": "2026-10-01",
+    "notes": [
+      "Current maintainer CLI guidance requires Node 22+ and FFmpeg; pin the renderer separately from the skill revision.",
+      "Placed-track mixing uses clip-local and composition clocks; the root master bus has no master automation. Inspect encoded scene boundaries and audio tails."
+    ],
+    "checked_at": "2026-10-12",
     "release_date": null,
     "runtime_tested": false,
     "playbook": "motion.md"
