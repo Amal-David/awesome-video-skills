@@ -21,10 +21,14 @@ Use `--request path.json` for reliable constraints. Supported fields include `ta
 
 Reference images/videos/audio are separate fields. A first-frame asset is not automatically a loose reference. Duration denotes a single generated segment, not the length of a whole edited film. Media-local privacy restricts the media runtime, not whether the controller itself runs in the cloud. Unknown price and numeric constraints remain preflight gaps.
 
+Positive `reference_video_seconds` and `reference_audio_seconds` require their matching positive `reference_videos` or `reference_audio` counts. Duration alone must not hide an input modality. `input_audio_seconds` must be positive and applies only to an audio-driven task, including when that task is inferred from the query. These are deliberate input-validation errors, not reasons to drop the supplied asset.
+
+Hybrid requests apply runtime, media privacy, controller, host and available-tool constraints to both footage and finishing. A cloud-only request currently has no fully compatible hybrid route because the catalog's finishing renderers run locally. Use `runtime: "either"` only when that matches the actual brief. Saved normalized requests retain capabilities inferred from the original query, so rerouting does not silently weaken them.
+
 ## RAG or external index
 
 `registry/retrieval.jsonl` contains one record per model, engine, controller, skill or workflow. Each has a stable ID, kind, record ID, content hash and serialized record text. Embed or index only changed hashes; retain source URLs, revision, evidence level and snapshot date as metadata. Apply structured capability/provider filters before similarity ranking, not after recommending an incompatible result.
 
 The built-in search uses BM25 lexical scoring and exact-ID boosts without dependencies, embeddings or network access. `registry/navigation.json` offers lane → workflow and family → model/skill navigation. Unsupported capabilities and evidence gaps must remain visible to downstream agents; do not drop them during chunking. The generated standalone router has its own catalog and guides, so copying only its skill directory is sufficient.
 
-Operation limits replace, rather than inherit, the general creation table. For LTX input-audio generation, pass `input_audio_seconds` to distinguish the source length from a requested output length. `auto_duration` is separate from a fixed `duration`; anchor incompatibilities remain hard constraints. Specialized local tasks include `inpaint`, `outpaint`, `restore`, `exr-hdr`, `dub` and `foley`.
+Operation limits replace, rather than inherit, the general creation table. For LTX input-audio generation, pass `input_audio_seconds` to distinguish the source length from a requested output length. `auto_duration` is separate from a fixed `duration`; anchor incompatibilities remain hard constraints. Specialized tasks include `inpaint`, `outpaint`, `restore`, `exr-hdr`, `dub` and `foley`; the selected surface determines whether execution is local or hosted. Discrete duration lists, such as Runway Gen-4.5's whole-second choices, are checked separately from minimum/maximum ranges.

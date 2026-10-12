@@ -3,8 +3,8 @@ name: video-kling
 description: "Model-specific video workflow for 3.0 in the kling family. Select exact modes, references, provider constraints and prompt structure before generation, editing or continuation."
 compatibility: File-reading agents; actual generation requires the separately verified provider or renderer.
 metadata:
-  version: "1.0.0"
-  snapshot: "2026-10-01"
+  version: "1.1.0"
+  snapshot: "2026-10-12"
 ---
 
 # Kling workflow

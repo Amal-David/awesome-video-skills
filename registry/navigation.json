@@ -104,8 +104,8 @@
       "upstream_skill_ids": [
         "calesthio--kling-official",
         "chatcut-inc--video-gen",
-        "inference-sh--video-prompting-guide",
         "inference-sh--ai-video-generation",
+        "inference-sh--video-prompting-guide",
         "inovue--fal-skill-creator",
         "scenario-labs--scenario-kling"
       ],
@@ -136,8 +136,8 @@
         "artokun--ltxv2-video",
         "benjiyaya--ltx-2-5-prompter",
         "calesthio--ltx2",
-        "sogni-ai--sogni-creative-agent-skill",
-        "sogni-ai--loop-maker"
+        "sogni-ai--loop-maker",
+        "sogni-ai--sogni-creative-agent-skill"
       ],
       "versions": {
         "2.3": {
@@ -187,31 +187,60 @@
         "minimax-ai--h3-prompt-writing",
         "minimax-ai--handdrawn-live-video-generator",
         "minimax-ai--minimalist-product-ad-generator",
+        "minimax-ai--minimax-music-gen",
+        "minimax-ai--mmx-cli",
         "minimax-ai--music-video-subtitle-generator",
         "minimax-ai--paper-collage-explainer-generator",
         "minimax-ai--papercraft-stop-motion-explainer",
-        "minimax-ai--mmx-cli",
-        "minimax-ai--minimax-music-gen",
         "scenario-labs--scenario-minimax-video",
         "sogni-ai--sogni-creative-agent-skill"
       ],
       "versions": {
-        "H3 Max": {
-          "chatcut": [
-            "h3-max-chatcut"
-          ],
+        "H3": {
           "fal": [
-            "minimax-h3-fal",
-            "h3-max-fal"
+            "minimax-h3-fal"
           ],
           "self-hosted": [
             "minimax-h3-local-fl",
             "minimax-h3-local-ref"
           ]
         },
+        "H3 Max": {
+          "chatcut": [
+            "h3-max-chatcut"
+          ],
+          "fal": [
+            "h3-max-fal"
+          ]
+        },
         "H3 Max Turbo": {
           "fal": [
             "h3-max-turbo-fal"
+          ]
+        }
+      }
+    },
+    "runway": {
+      "guide": "docs/models/runway.md",
+      "model_ids": [
+        "runway-gen-4-5",
+        "runway-aleph-2"
+      ],
+      "upstream_skill_ids": [
+        "inference-sh--ai-video-generation",
+        "inference-sh--video-prompting-guide",
+        "runwayml--use-runway-api",
+        "scenario-labs--scenario-runway"
+      ],
+      "versions": {
+        "Aleph 2.0": {
+          "runway": [
+            "runway-aleph-2"
+          ]
+        },
+        "Gen-4.5": {
+          "runway": [
+            "runway-gen-4-5"
           ]
         }
       }
@@ -226,14 +255,14 @@
       "upstream_skill_ids": [
         "calesthio--seedance-2-5",
         "chatcut-inc--video-gen",
-        "inference-sh--video-prompting-guide",
         "inference-sh--ai-video-generation",
         "inference-sh--image-to-video",
         "inference-sh--seedance",
+        "inference-sh--video-prompting-guide",
         "inovue--fal-skill-creator",
+        "scenario-labs--scenario-seedance",
         "scenario-labs--scenario-seedance-music-video",
         "scenario-labs--scenario-seedance-storyboard",
-        "scenario-labs--scenario-seedance",
         "sogni-ai--sogni-creative-agent-skill"
       ],
       "versions": {

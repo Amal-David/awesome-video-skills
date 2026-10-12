@@ -3,8 +3,8 @@ name: video-happyhorse
 description: "Model-specific video workflow for 1.0, 1.1 in the happyhorse family. Select exact modes, references, provider constraints and prompt structure before generation, editing or continuation."
 compatibility: File-reading agents; actual generation requires the separately verified provider or renderer.
 metadata:
-  version: "1.0.0"
-  snapshot: "2026-10-01"
+  version: "1.1.0"
+  snapshot: "2026-10-12"
 ---
 
 # Happyhorse workflow

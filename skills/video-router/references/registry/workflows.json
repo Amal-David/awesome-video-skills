@@ -1158,7 +1158,7 @@
       },
       {
         "id": "compose",
-        "action": "Generate content outside the source-video frame. Read the exact local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
+        "action": "Generate content outside the source-video frame. Read the selected provider or local workflow guide, pin its model/adapter stack, and verify all documented version exclusions.",
         "output": "shot-plan.json",
         "next": "draft"
       },

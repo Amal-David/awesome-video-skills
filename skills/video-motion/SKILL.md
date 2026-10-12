@@ -3,8 +3,8 @@ name: video-motion
 description: "Create editable motion graphics with Claude Opus 5.5 or GPT-6 Astra using Remotion, Hyperframes, Canvas, Manim or Blender. Use for kinetic typography, UI, charts, launch videos and deterministic animation."
 compatibility: File-reading agents; actual generation requires the separately verified provider or renderer.
 metadata:
-  version: "1.0.0"
-  snapshot: "2026-10-01"
+  version: "1.1.0"
+  snapshot: "2026-10-12"
 ---
 
 # Motion workflow

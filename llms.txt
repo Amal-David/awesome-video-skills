@@ -13,6 +13,9 @@
 - [Upstream skill catalog](docs/catalog.md): pinned paths, evidence and portability.
 - [Motion graphics](docs/motion.md): Remotion, Hyperframes, Canvas, Manim and Blender.
 - [Quality review](docs/quality.md): playback, audio, content and encoded metadata.
+- [Workflow recipes](docs/workflow-recipes.md): app launches, explainers, captions, presenters, translation, editing and assembly.
+- [Evaluation protocol](docs/evaluation.md): compare production steps and final artifacts, then test a focused skill revision.
+- [Runway guide](docs/models/runway.md): Gen-4.5 creation and Aleph 2.0 editing with exact provider boundaries.
 
 ## Machine-readable interfaces
 - [Discovery manifest](agent-manifest.json): project-specific navigation and CLI contract.

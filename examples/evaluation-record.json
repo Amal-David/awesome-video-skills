@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "workflow-evaluation-template",
+  "completed": false,
+  "case_id": "app-launch-example",
+  "brief": "Create a 15-second app launch with supplied UI, exact copy and editable source.",
+  "versions": {
+    "controller": null,
+    "skill_revision": null,
+    "backend_or_renderer": null
+  },
+  "inputs": [],
+  "candidate_outputs": [],
+  "resources": {
+    "attempts_including_failures": null,
+    "elapsed_seconds": null,
+    "actual_cost_usd": null,
+    "manual_interventions": []
+  },
+  "acceptance_checks": [
+    {"id": "exact-copy", "hard_constraint": true, "status": "not_observed", "evidence": []},
+    {"id": "ui-fidelity", "hard_constraint": true, "status": "not_observed", "evidence": []},
+    {"id": "full-playback", "hard_constraint": true, "status": "not_observed", "evidence": []},
+    {"id": "audio-review", "hard_constraint": true, "status": "not_observed", "evidence": []},
+    {"id": "encoded-format", "hard_constraint": true, "status": "not_observed", "evidence": []},
+    {"id": "editable-source", "hard_constraint": true, "status": "not_observed", "evidence": []}
+  ],
+  "process_findings": [],
+  "output_findings": [],
+  "revision": null,
+  "held_out_case_results": [],
+  "limitations": ["Template only. No workflow was executed or scored."]
+}

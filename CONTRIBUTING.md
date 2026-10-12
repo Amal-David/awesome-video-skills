@@ -21,6 +21,8 @@ python3 scripts/build.py --check
 python3 -m unittest discover -s tests -v
 ```
 
-Update manifest counts when adding records. Check Markdown links, evidence IDs, generated bundles and example requests. Optional network checks are `scripts/verify_pins.py` for pinned path/blob identity and `scripts/check_sources.py` for upstream revision drift. Neither performs an upstream execution audit.
+The builder derives manifest and published catalog counts from the canonical records. Update the manifest's snapshot date and preferred release window only for a documented curation update; preserve individual records' checked_at dates unless their evidence was reviewed. Keep the README's avs:stats markers intact. Check Markdown links, evidence IDs, generated bundles and example requests. Optional network checks are `scripts/verify_pins.py` for pinned path/blob identity and `scripts/check_sources.py` for upstream revision drift. Neither performs an upstream execution audit.
+
+For claims that a skill produces better videos, follow [the evaluation protocol](docs/evaluation.md): retain a baseline, the unchanged brief, attempts and cost, process and output findings, and checks on additional cases. A refreshed source pin or passing router test does not support a runtime-quality claim.
 
 Explain the evidence, scope and tests in the pull request. Do not claim a runtime was tested unless the actual generation/rendering workflow was run and its result inspected. Do not add generated media, credentials, local environment files or model weights. Keep this project’s metadata and original playbooks separate from upstream licenses.
